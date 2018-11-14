@@ -23,9 +23,9 @@ namespace Loppemarked.Product
                     SetMaterial("Clay");
                     break;
                 case 1:
-                    SetName("");
-                    SetCondition("Slightly used");
-                    SetMaterial("Plastic");
+                    SetName("Barcalounger");
+                    SetCondition("Well used");
+                    SetMaterial("Leather");
                     break;
                 case 2:
                     SetName("Brown pot");
@@ -33,9 +33,9 @@ namespace Loppemarked.Product
                     SetMaterial("Clay");
                     break;
                 case 3:
-                    SetName("Garden chair");
+                    SetName("Table 1.5mx4m");
                     SetCondition("used");
-                    SetMaterial("Plastic");
+                    SetMaterial("Oak");
                     break;
                 default:
                     SetName("No item");

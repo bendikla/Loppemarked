@@ -7,6 +7,44 @@ namespace Loppemarked.Product
         private string _condition;
         private string _material;
 
+        public Miscellaneous(){
+            RandomMiscellaneousProduct();
+        }
+
+        public void RandomMiscellaneousProduct()
+        {
+            Random rnd = new Random();
+            var randomProduct = rnd.Next(4);
+            switch (randomProduct)
+            {
+                case 0:
+                    SetName("Pocketknife");
+                    SetCondition("Well used");
+                    SetMaterial("Steel");
+                    break;
+                case 1:
+                    SetName("Fishing rod");
+                    SetCondition("Slightly used");
+                    SetMaterial("Metall");
+                    break;
+                case 2:
+                    SetName("Skateboard");
+                    SetCondition("Used");
+                    SetMaterial("Misc");
+                    break;
+                case 3:
+                    SetName("Champions league football");
+                    SetCondition("Well kicked");
+                    SetMaterial("Rubber");
+                    break;
+                default:
+                    SetName("No item");
+                    SetCondition("0");
+                    SetMaterial("0");
+                    break;
+            }
+        }
+
         public string GetCondition()
         {
             Console.WriteLine("Inside Miscellaneous.condition method");
