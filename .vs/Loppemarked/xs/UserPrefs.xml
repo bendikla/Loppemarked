@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{BC7B12E5-B19C-49A6-86C4-D4BB14125D37}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Loppemarked/Customer.cs">
+    <Files>
+      <File FileName="Loppemarked/Customer.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Loppemarked PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
