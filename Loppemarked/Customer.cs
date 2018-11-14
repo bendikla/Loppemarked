@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Loppemarked
 {
-    class Customer
+    class Customer 
     {
         public string customerID { get; set; }
         public string customerName { get; set; }
@@ -23,23 +23,18 @@ namespace Loppemarked
             bankAccount = bankAccountnr;
         }
 
-        public void BuyItems()
+        public void Purchase_item()
         {
             //while kunden har penger
             // Hent produkt
             // Putt produkt inn i kundens handlekurv?
         }
 
-        public void GetItems()
+        public void Get_item()
         {
             //Forhver item i handlekurv
             //print til consol(item)
         }
 
-        public bool checkFunds()
-        {
-            //Hent ut kreditt i bank
-            return true;
-        }
     }
 }

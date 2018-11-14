@@ -5,10 +5,12 @@ using System.Text;
 
 namespace Loppemarked
 {
+    // Main class to run the program
     class Program
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }

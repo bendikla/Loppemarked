@@ -1,0 +1,87 @@
+﻿using System;
+namespace Loppemarked.Product
+{
+    public class LivingRoom
+    {
+        private string _name;
+        private string _condition;
+        private string _material;
+
+        public LivingRoom(){
+            RandomLivingRoomProduct();
+        }
+
+        public void RandomLivingRoomProduct()
+        {
+            Random rnd = new Random();
+            var randomProduct = rnd.Next(4);
+            switch (randomProduct)
+            {
+                case 0:
+                    SetName("Lamp");
+                    SetCondition("Well used");
+                    SetMaterial("Clay");
+                    break;
+                case 1:
+                    SetName("");
+                    SetCondition("Slightly used");
+                    SetMaterial("Plastic");
+                    break;
+                case 2:
+                    SetName("Brown pot");
+                    SetCondition("New");
+                    SetMaterial("Clay");
+                    break;
+                case 3:
+                    SetName("Garden chair");
+                    SetCondition("used");
+                    SetMaterial("Plastic");
+                    break;
+                default:
+                    SetName("No item");
+                    SetCondition("0");
+                    SetMaterial("0");
+                    break;
+            }
+        }
+
+        public string GetCondition()
+        {
+            Console.WriteLine("Inside Livingroom.condition method");
+            return _condition;
+        }
+
+        public void SetCondition(string condition)
+        {
+            _condition = condition;
+        }
+
+        public string GetName()
+        {
+            Console.WriteLine("Inside Livingroom.Name method");
+            return _name;
+        }
+
+        public void SetName(string name)
+        {
+            _name = name;
+        }
+
+        public string GetMaterial()
+        {
+            Console.WriteLine("Inside Livingroom.Material method");
+            return _material;
+        }
+
+        public void SetMaterial(string material)
+        {
+            _material = material;
+        }
+
+        public bool Is_sold()
+        {
+            Console.WriteLine("Inside Livingroom.is_sold method");
+            return true;
+        }
+    }
+}

@@ -1,8 +1,17 @@
 ﻿<Properties StartupConfiguration="{BC7B12E5-B19C-49A6-86C4-D4BB14125D37}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Loppemarked/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Loppemarked/Product/ProductFactory.cs">
     <Files>
-      <File FileName="Loppemarked/Customer.cs" Line="1" Column="1" />
-      <File FileName="Loppemarked/Program.cs" Line="8" Column="36" />
+      <File FileName="Loppemarked/Customer.cs" Line="9" Column="20" />
+      <File FileName="Loppemarked/Product/Garden.cs" Line="40" Column="38" />
+      <File FileName="Loppemarked/Product/IProduct.cs" Line="9" Column="10" />
+      <File FileName="Loppemarked/item.cs" Line="1" Column="1" />
+      <File FileName="Loppemarked/Program.cs" Line="13" Column="13" />
+      <File FileName="Loppemarked/Product/Kitchen.cs" Line="44" Column="10" />
+      <File FileName="Loppemarked/Product/LivingRoom.cs" Line="38" Column="34" />
+      <File FileName="Loppemarked/Product/Miscellaneous.cs" Line="38" Column="34" />
+      <File FileName="Loppemarked/Product/Wearable.cs" Line="38" Column="34" />
+      <File FileName="Loppemarked/Product/ProductCategory.cs" Line="4" Column="32" />
+      <File FileName="Loppemarked/Product/ProductFactory.cs" Line="15" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
