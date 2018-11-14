@@ -3,6 +3,7 @@ namespace Loppemarked.Product
 {
     public class ProductFactory
     {
+        public ProductFactory(){}
 
         public static IProduct CreateProduct(ProductCategory category){
             IProduct product = null;

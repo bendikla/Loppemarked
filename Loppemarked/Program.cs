@@ -10,7 +10,7 @@ namespace Loppemarked
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }

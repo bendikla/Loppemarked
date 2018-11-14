@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Loppemarked.Product
 {
-    public class Wearable
+    public class Wearable : IProduct
     {
         private string _name;
         private string _condition;

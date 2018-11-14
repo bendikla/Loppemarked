@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Loppemarked.Product
 {
-    public class Miscellaneous
+    public class Miscellaneous : IProduct
     {
         private string _name;
         private string _condition;

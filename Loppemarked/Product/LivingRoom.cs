@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Loppemarked.Product
 {
-    public class LivingRoom
+    public class LivingRoom : IProduct
     {
         private string _name;
         private string _condition;
