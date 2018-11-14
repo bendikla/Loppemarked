@@ -1,0 +1,6 @@
+C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.exe
+C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.pdb
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csprojAssemblyReference.cache
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csproj.CoreCompileInputs.cache
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.exe
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.pdb
