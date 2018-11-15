@@ -7,17 +7,10 @@ namespace Loppemarked
 {
     class Market
     {     
+        Seller slrr = new Seller();
         public Market()
         {
-        }
-
-        public  void showProducts()
-        {
-            Seller seller = new Seller();
-            foreach (var item in seller.itemForSale)
-            {
-                Console.WriteLine("For sale: {0}, condition: {1}, sold from {2}", item.itemName, item.itemCondition, item.sellerName);
-            }
+            slrr.showProducts();
         }
     }
 }

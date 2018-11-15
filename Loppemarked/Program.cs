@@ -12,32 +12,29 @@ namespace Loppemarked
         
         static void Main(string[] args)
         {
-<<<<<<< HEAD
 
-=======
-            Console.WriteLine("Vælkummen te Lottas Loppemarked");
-           // Console.WriteLine("For å sjå varar trykj 1, for å sjå kjøpshistorikk trykj 2");
 
-            var seller = new Seller("a01", "Gunnar Tjøme");
-            seller.AddProduct("GT Sykkel", "Nesten ødelagt");
+              Console.WriteLine("Velkommen til Lottas Loppemarked");
+            Console.WriteLine("For å se varer for salg trykk 1, for å se kjøpshistorikk trykk 2");
 
-           // int input = Console.Read();
+            var sllr = new Seller("Gunnar Tjøme");
+            sllr.AddProduct("GT Sykkel", "Nesten ødelagt");
 
-          //  if (input == 1)
-           // {
+            int input = Console.Read();
+
+            if (input == 1)
+            {
                 var market = new Market();
-                market.showProducts();
-                Console.WriteLine(seller.itemForSale.Count);
+                //Console.WriteLine(seller.itemForSale.Count);
                // Console.WriteLine("\nHer ha det ikkje kommi noko enda! Prøv igjen i morgen");
                 Console.ReadLine();
-         /*   } 
+            }  /*
             else
             {
                 Console.WriteLine("\nSiden vi ikkje har fått varar enda, er det heller ingen historikk!");
                 Console.ReadLine();
             } */
             Console.ReadLine();
->>>>>>> dc1b15b93e607560cd210bbeaf0c01d4fe932b63
         }
     }
 }

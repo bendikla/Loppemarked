@@ -45,7 +45,6 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Market.cs" />
-    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seller.cs" />
@@ -59,7 +58,6 @@
     <Compile Include="Product\ProductCategory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Product\" />
     <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,26 +8,29 @@ namespace Loppemarked
 {
     class Seller
     {
-        public string sellerID { get;  private set; }
-        public static string sellerName { get; private set; }
+        public string name { get; private set; }
 
-        public List<Item> itemForSale = new List<Item>();
+        public ConcurrentBag<Item> forSale = new ConcurrentBag<Item>();
 
-        public Seller(string id, string name)
+        public Seller(string name)
         {
-            sellerID = id;
-            sellerName = name;
+            this.name = name;
         }
 
-        public Seller()
-        {
-
-        }
+        public Seller() { }
 
         public  void AddProduct(string productName, string condition)
         {
-            itemForSale.Add(new Item(productName, condition, sellerName));
-            //Console.WriteLine(item.itemName);
+            forSale.Add(new Item(productName, condition, name));
+        }
+
+        public void showProducts()
+        {
+
+            foreach (var item in forSale)
+            {
+                Console.WriteLine("For sale: {0}, condition: {1}, sold from {2}", item.itemName, item.itemCondition, item.sellerName);
+            }
         }
     }
 }
