@@ -1,43 +1,44 @@
 ﻿using System;
-namespace Loppemarked.Product
+namespace Loppemarked.Market.ProductFactory
 {
-    public class Wearable : IProduct
+    public class Kitchen : IProduct
     {
         private string _name;
         private string _condition;
         private string _material;
 
-        public Wearable(){
-            RandomWearableProduct();
+        public Kitchen(){
+            RandomKitchenProduct();
         }
-        public void RandomWearableProduct()
+
+        public void RandomKitchenProduct()
         {
             Random rnd = new Random();
             var randomProduct = rnd.Next(4);
             switch (randomProduct)
             {
                 case 0:
-                    SetName("Mens jeans");
-                    SetCondition("Well worn");
-                    SetMaterial("Denim");
+                    SetName("Mixmaster");
+                    SetCondition("Well used");
+                    SetMaterial("Plastic and iron");
                     break;
                 case 1:
-                    SetName("Brown cardigan");
-                    SetCondition("New");
-                    SetMaterial("Wool");
+                    SetName("Cutlery set");
+                    SetCondition("Used");
+                    SetMaterial("Silverware");
                     break;
                 case 2:
-                    SetName("Polo shirt");
-                    SetCondition("Used");
-                    SetMaterial("Polyester");
+                    SetName("Stainless steel pan");
+                    SetCondition("New");
+                    SetMaterial("Steel");
                     break;
                 case 3:
-                    SetName("American flag boxer shorts");
-                    SetCondition("Well worn");
-                    SetMaterial("Wool");
+                    SetName("Beer glass");
+                    SetCondition("Used");
+                    SetMaterial("Glass");
                     break;
                 default:
-                    SetName("No item");
+                    SetName("No product");
                     SetCondition("0");
                     SetMaterial("0");
                     break;
@@ -46,7 +47,7 @@ namespace Loppemarked.Product
 
         public string GetCondition()
         {
-            Console.WriteLine("Inside Wearable.condition method");
+            Console.WriteLine("Inside Kitchen.condition method");
             return _condition;
         }
 
@@ -57,7 +58,7 @@ namespace Loppemarked.Product
 
         public string GetName()
         {
-            Console.WriteLine("Inside Wearable.Name method");
+            Console.WriteLine("Inside Kitchen.Name method");
             return _name;
         }
 
@@ -68,7 +69,7 @@ namespace Loppemarked.Product
 
         public string GetMaterial()
         {
-            Console.WriteLine("Inside Wearable.Material method");
+            Console.WriteLine("Inside Kitchen.Material method");
             return _material;
         }
 
@@ -79,7 +80,7 @@ namespace Loppemarked.Product
 
         public bool Is_sold()
         {
-            Console.WriteLine("Inside Wearable.is_sold method");
+            Console.WriteLine("Inside Kitchen.is_sold method");
             return true;
         }
     }
