@@ -4,41 +4,44 @@ using System.Linq;
 using System.Runtime.Remoting;
 using System.Text;
 using System.Threading;
+using Loppemarked.Market.ProductFactory;
 
 namespace Loppemarked
 {
     class Customer 
     {
-        public string customerID { get; set; }
-        public string customerName { get; set; }
-        public List<string> itemsPurchased { get; set; }
 
-        public int bankAccount { get; set; }
+        public string customerName { get; set; }
+        public List<string> itemsPurchesed { get; set; }
+
 
 
         public Customer(string name)
         {
-            customerName = name; 
+            customerName = name;
+            itemsPurchesed = new List<string>();
         }
-
+        /*
         public void PurchaseItem()
         {
-            var productBought = "ja"; //Add Produksjon
+            var productBought = ProductFactory.CreateProduct(ProductCategory.LivingRoom);
             if (productBought != null)
             {
-                itemsPurchased.Add(productBought);
+                itemsPurchesed.Add(productBought.ToString());
                 Thread.Sleep(1000);
             }
             else
             {
                 Thread.CurrentThread.Join();
             }
-        }
+        } */
 
-        public void Get_item()
+        public void Get_items()
         {
-            //Forhver item i handlekurv
-            //print til consol(item)
+            foreach (var item in itemsPurchesed)
+            {
+                Console.WriteLine(item);
+            }
         }
 
     }

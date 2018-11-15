@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using Loppemarked.Market.Seller;
+using Loppemarked.Market.Sale;
 
 namespace Loppemarked.Market.Controller
 {
@@ -11,7 +11,9 @@ namespace Loppemarked.Market.Controller
     {
         public Thread[] storeThreads { get; set; }
         public List<Customer> customers { get; set; }
-        public List<Loppemarked.Seller> sellers { get; set; }
+        public List<Thread> customerThreads { get; set; }
+        public List<Seller> sellers { get; set; }
+        public List<Thread> SellerThreads { get; set; }
 
         public int amountOfCustomers { get; set; }
         public int amountOfSellers { get; set; }
@@ -25,7 +27,7 @@ namespace Loppemarked.Market.Controller
             this.amountOfCustomers = amountOfCustomers;
             this.amountOfSellers = amountOfSellers;
             customers = new List<Customer>();
-            sellers   = new List<Loppemarked.Seller>();
+            sellers   = new List<Seller>();
             storeThreads = new Thread[4]; //why 4?
         }
 
@@ -33,16 +35,27 @@ namespace Loppemarked.Market.Controller
         {
             CreateCustomers();
             CreateSellers();
+          //  CreateCustomerThreads();
         }
-
+        /*
         private void CreateCustomerThreads()
+        {
+            for (var i = 0; i < amountOfCustomers - 1; i++)
+            {
+                var customer = customers[i];
+                var thread = new Thread(customer.PurchaseItem);
+                customerThreads.Add(thread);
+            }
+        }
+        /*
+        private void CreateSellerThreads()
         {
             for (var i = 0; i < amountOfSellers - 1; i++)
             {
-                var customer = customers[i];
-                var thread = new Thread(cu);
+                var seller = sellers[i];
+                var thread = new Thread(seller.AddProduct());
             }
-        }
+        } */
 
         private void CreateSellers()
         {

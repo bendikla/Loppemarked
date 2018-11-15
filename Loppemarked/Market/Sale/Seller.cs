@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Loppemarked
+namespace Loppemarked.Market.Sale
 {
     class Seller
     {
@@ -19,9 +19,9 @@ namespace Loppemarked
 
         public Seller() { }
 
-        public  void AddProduct(string productName, string condition)
+        public  void AddProduct()
         {
-            forSale.Add(new Item(productName, condition, name));
+            
         }
 
         public void showProducts()

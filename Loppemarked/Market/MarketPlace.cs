@@ -14,11 +14,9 @@ namespace Loppemarked.Market
 
         public bool marketPlaceIsOpen = false;
 
-        public MarketPlace(ProductCategory productCategory)
-        {
-            for (int i = 0; i < 10; i++){
-            product = ProductFactory.ProductFactory.CreateProduct(productCategory);
-            }
+        public MarketPlace(ProductCategory productCategory, int cases)
+        {           
+            product = ProductFactory.ProductFactory.CreateProduct(productCategory, cases);
 
             marketPlaceIsOpen = true;
         }
