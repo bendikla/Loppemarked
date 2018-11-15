@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Loppemarked.Market.Controller;
 
 namespace Loppemarked.Market.ProductFactory
@@ -48,6 +48,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetCondition()
         {
+<<<<<<< HEAD
+=======
+           // Console.WriteLine("Inside Kitchen.condition method");
+>>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return _condition;
         }
 
@@ -58,6 +62,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetName()
         {
+<<<<<<< HEAD
+=======
+           // Console.WriteLine("Inside Kitchen.Name method");
+>>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return _name;
         }
 
@@ -68,6 +76,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetMaterial()
         {
+<<<<<<< HEAD
+=======
+           // Console.WriteLine("Inside Kitchen.Material method");
+>>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return _material;
         }
 
@@ -78,7 +90,20 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold()
         {
+<<<<<<< HEAD
+=======
+          //  Console.WriteLine("Inside Kitchen.is_sold method");
+>>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return true;
+        }
+
+        public string GetSeller()
+        {
+            var random = new Random();
+
+            var nameTypeValues = Enum.GetValues(typeof(Names));
+            var names = (Names)nameTypeValues.GetValue(random.Next(45));
+            return names.ToString();
         }
     }
 }

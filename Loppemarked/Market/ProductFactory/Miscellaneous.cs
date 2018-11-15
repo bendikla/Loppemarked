@@ -48,7 +48,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetCondition()
         {
-            Console.WriteLine("Inside Miscellaneous.condition method");
+          //  Console.WriteLine("Inside Miscellaneous.condition method");
             return _condition;
         }
 
@@ -59,7 +59,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetName()
         {
-            Console.WriteLine("Inside Miscellaneous.Name method");
+          //  Console.WriteLine("Inside Miscellaneous.Name method");
             return _name;
         }
 
@@ -70,7 +70,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetMaterial()
         {
-            Console.WriteLine("Inside Miscellaneous.Material method");
+          //  Console.WriteLine("Inside Miscellaneous.Material method");
             return _material;
         }
 
@@ -81,7 +81,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold()
         {
-            Console.WriteLine("Inside Miscellaneous.is_sold method");
+          //  Console.WriteLine("Inside Miscellaneous.is_sold method");
             return true;
         }
     }
