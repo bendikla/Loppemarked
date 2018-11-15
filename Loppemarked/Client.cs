@@ -23,7 +23,7 @@ namespace Loppemarked
 
             ProductCategory cat = new ProductCategory();
 
-
+            // TODO - Hvorfor lager vi flere marketplaces?
                 MarketPlace market = new MarketPlace(cat, 0);
                 MarketPlace market2 = new MarketPlace(cat, 1);
                 MarketPlace market3 = new MarketPlace(cat, 2);

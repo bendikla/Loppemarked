@@ -8,13 +8,8 @@ namespace Loppemarked.Market.ProductFactory
 
         public static IProduct CreateProduct(ProductCategory category, int cases){
             IProduct product = null;
-<<<<<<< HEAD
-            switch (category)
-=======
-            
-
+//           switch (category)
             switch (cases)
->>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             {
                 case 0:
                     product = new Garden();

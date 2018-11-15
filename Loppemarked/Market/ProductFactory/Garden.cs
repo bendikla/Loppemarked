@@ -1,9 +1,7 @@
 using System;
 using Loppemarked.Market.Controller;
-<<<<<<< HEAD
-=======
 using Loppemarked.Market.Sale;
->>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
+
 
 namespace Loppemarked.Market.ProductFactory
 {
@@ -53,10 +51,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetCondition(){
-<<<<<<< HEAD
-=======
-           // Console.WriteLine("Inside Garden.condition method");
->>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return _condition;
         }
 
@@ -65,10 +59,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetName(){
-<<<<<<< HEAD
-=======
-           // Console.WriteLine("Inside Garden.Name method");
->>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return _name;
         }
 
@@ -77,10 +67,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetMaterial(){
-<<<<<<< HEAD
-=======
-          //  Console.WriteLine("Inside Garden.Material method");
->>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return _material;
         }
 
@@ -89,10 +75,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public bool Is_sold(){
-<<<<<<< HEAD
-=======
-           // Console.WriteLine("Inside Garden.is_sold method");
->>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
             return true;
         }
 

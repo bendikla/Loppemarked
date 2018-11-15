@@ -53,7 +53,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetCondition()
         {
-           // Console.WriteLine("Inside Livingroom.condition method");
             return _condition;
         }
 
@@ -64,7 +63,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetName()
         {
-           // Console.WriteLine("Inside Livingroom.Name method");
             return _name;
         }
 
@@ -75,7 +73,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetMaterial()
         {
-           // Console.WriteLine("Inside Livingroom.Material method");
             return _material;
         }
 
@@ -86,7 +83,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold()
         {
-           // Console.WriteLine("Inside Livingroom.is_sold method");
             return true;
         }
 
