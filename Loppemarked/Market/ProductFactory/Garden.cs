@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Loppemarked.Product
+namespace Loppemarked.Market.ProductFactory
 {
     public class Garden : IProduct
     {
