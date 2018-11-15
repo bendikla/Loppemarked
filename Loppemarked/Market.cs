@@ -10,6 +10,9 @@ namespace Loppemarked
         Seller slrr = new Seller();
         public Market()
         {
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("  Lotta's Loppemarked");
+            Console.WriteLine("--------------------------");
             slrr.showProducts();
         }
     }
