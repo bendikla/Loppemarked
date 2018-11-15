@@ -8,7 +8,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public static IProduct CreateProduct(ProductCategory category){
             IProduct product = null;
-            switch(category)
+            switch (category)
             {
                 case ProductCategory.Garden:
                     product = new Garden();
@@ -34,5 +34,8 @@ namespace Loppemarked.Market.ProductFactory
             return product;
         }
 
+        public void printProduct(ProductCategory category){
+
+        }
     }
 }

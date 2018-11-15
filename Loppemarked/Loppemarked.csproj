@@ -57,6 +57,7 @@
     <Compile Include="Market\ProductFactory\ProductFactory.cs" />
     <Compile Include="Market\ProductFactory\Wearable.cs" />
     <Compile Include="Market\MarketPlace.cs" />
+    <Compile Include="Market\Controller\Client.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Market\" />

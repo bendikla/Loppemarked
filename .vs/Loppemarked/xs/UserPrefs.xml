@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{BC7B12E5-B19C-49A6-86C4-D4BB14125D37}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Loppemarked/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Loppemarked/Market/ProductFactory/Wearable.cs">
     <Files>
-      <File FileName="Loppemarked/Market/ProductFactory/Miscellaneous.cs" Line="2" Column="29" />
-      <File FileName="Loppemarked/Market/MarketPlace.cs" Line="18" Column="10" />
-      <File FileName="Loppemarked/Customer.cs" Line="1" Column="1" />
-      <File FileName="Loppemarked/Market/ProductFactory/IProduct.cs" Line="2" Column="29" />
-      <File FileName="Loppemarked/Market/ProductFactory/Garden.cs" Line="2" Column="29" />
-      <File FileName="Loppemarked/Market/ProductFactory/Kitchen.cs" Line="2" Column="29" />
-      <File FileName="Loppemarked/Market/ProductFactory/LivingRoom.cs" Line="2" Column="29" />
+      <File FileName="Loppemarked/Market/ProductFactory/Garden.cs" Line="19" Column="30" />
+      <File FileName="Loppemarked/Market/ProductFactory/Kitchen.cs" Line="17" Column="1" />
+      <File FileName="Loppemarked/Market/ProductFactory/LivingRoom.cs" Line="16" Column="52" />
       <File FileName="Loppemarked/Market/ProductFactory/ProductCategory.cs" Line="2" Column="29" />
-      <File FileName="Loppemarked/Market/ProductFactory/ProductFactory.cs" Line="2" Column="29" />
-      <File FileName="Loppemarked/Market/ProductFactory/Wearable.cs" Line="2" Column="29" />
+      <File FileName="Loppemarked/Market/ProductFactory/ProductFactory.cs" Line="13" Column="44" />
+      <File FileName="Loppemarked/Market/ProductFactory/Wearable.cs" Line="15" Column="13" />
       <File FileName="Loppemarked/item.cs" Line="1" Column="1" />
-      <File FileName="Loppemarked/Program.cs" Line="12" Column="18" />
+      <File FileName="Loppemarked/Program.cs" Line="18" Column="55" />
+      <File FileName="Loppemarked/Market/ProductFactory/IProduct.cs" Line="2" Column="29" />
+      <File FileName="Loppemarked/Market/Controller/Client.cs" Line="6" Column="58" />
+      <File FileName="Loppemarked/Market/MarketPlace.cs" Line="21" Column="26" />
+      <File FileName="Loppemarked/Market/ProductFactory/Miscellaneous.cs" Line="16" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

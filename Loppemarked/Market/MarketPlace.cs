@@ -12,14 +12,13 @@ namespace Loppemarked.Market
         public IProduct product;
         public string name { get; set; }
 
+
         public bool marketPlaceIsOpen = false;
 
         public MarketPlace(ProductCategory productCategory)
         {
-            for (int i = 0; i < 10; i++){
             product = ProductFactory.ProductFactory.CreateProduct(productCategory);
-            }
-
+            Console.WriteLine(product.GetName() + ", " + product.GetCondition() + " " + product.GetMaterial());
             marketPlaceIsOpen = true;
         }
 

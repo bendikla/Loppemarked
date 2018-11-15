@@ -1,4 +1,6 @@
 ﻿using System;
+using Loppemarked.Market.Controller;
+
 namespace Loppemarked.Market.ProductFactory
 {
     public class Wearable : IProduct
@@ -12,8 +14,7 @@ namespace Loppemarked.Market.ProductFactory
         }
         public void RandomWearableProduct()
         {
-            Random rnd = new Random();
-            var randomProduct = rnd.Next(4);
+            var randomProduct = Client.rnd.Next(4);
             switch (randomProduct)
             {
                 case 0:
