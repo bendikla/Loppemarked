@@ -3,7 +3,8 @@ namespace Loppemarked.Market.ProductFactory
 {
     public class ProductFactory
     {
-        public ProductFactory(){}
+        public ProductFactory(){
+        }
 
         public static IProduct CreateProduct(ProductCategory category){
             IProduct product = null;
