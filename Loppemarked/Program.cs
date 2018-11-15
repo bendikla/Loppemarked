@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using Loppemarked.Market.ProductFactory;
 
 namespace Loppemarked
 {
     // Main class to run the program
     class Program
     {
+<<<<<<< HEAD
         
+=======
+        Market.Product product;
+
+>>>>>>> origin/Benjamin
         static void Main(string[] args)
         {
 

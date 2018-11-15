@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting;
 using System.Text;
+using System.Threading;
 
 namespace Loppemarked
 {
@@ -10,24 +11,28 @@ namespace Loppemarked
     {
         public string customerID { get; set; }
         public string customerName { get; set; }
-        public List<string> ItemsPurchesed { get; set; }
+        public List<string> itemsPurchased { get; set; }
 
         public int bankAccount { get; set; }
 
 
-        public Customer(string id, string name, int bankAccountnr)
+        public Customer(string name)
         {
-            customerID = id;
-            customerName = name;
-            ItemsPurchesed = new List<string>();
-            bankAccount = bankAccountnr;
+            customerName = name; 
         }
 
-        public void Purchase_item()
+        public void PurchaseItem()
         {
-            //while kunden har penger
-            // Hent produkt
-            // Putt produkt inn i kundens handlekurv?
+            var productBought = "ja"; //Add Produksjon
+            if (productBought != null)
+            {
+                itemsPurchased.Add(productBought);
+                Thread.Sleep(1000);
+            }
+            else
+            {
+                Thread.CurrentThread.Join();
+            }
         }
 
         public void Get_item()
