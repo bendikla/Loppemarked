@@ -1,11 +1,15 @@
 ﻿using System;
-namespace Loppemarked.Product
+using Loppemarked.Market.Controller;
+using Loppemarked.Market.Sale;
+
+namespace Loppemarked.Market.ProductFactory
 {
     public class Garden : IProduct
     {
         private string _name;
         private string _condition;
         private string _material;
+        private string _seller;
 
         // TODO create a selection of random items in garden category
         public Garden(){
@@ -47,7 +51,7 @@ namespace Loppemarked.Product
         }
 
         public string GetCondition(){
-            Console.WriteLine("Inside Garden.condition method");
+           // Console.WriteLine("Inside Garden.condition method");
             return _condition;
         }
 
@@ -56,7 +60,7 @@ namespace Loppemarked.Product
         }
 
         public string GetName(){
-            Console.WriteLine("Inside Garden.Name method");
+           // Console.WriteLine("Inside Garden.Name method");
             return _name;
         }
 
@@ -65,7 +69,7 @@ namespace Loppemarked.Product
         }
 
         public string GetMaterial(){
-            Console.WriteLine("Inside Garden.Material method");
+          //  Console.WriteLine("Inside Garden.Material method");
             return _material;
         }
 
@@ -74,8 +78,17 @@ namespace Loppemarked.Product
         }
 
         public bool Is_sold(){
-            Console.WriteLine("Inside Garden.is_sold method");
+           // Console.WriteLine("Inside Garden.is_sold method");
             return true;
+        }
+
+        public string GetSeller()
+        {
+           var random = new Random();
+
+            var nameTypeValues = Enum.GetValues(typeof(Names));
+            var names = (Names) nameTypeValues.GetValue(random.Next(45));
+            return names.ToString();
         }
     }
 }

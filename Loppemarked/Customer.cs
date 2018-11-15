@@ -3,37 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting;
 using System.Text;
+using System.Threading;
+using Loppemarked.Market.ProductFactory;
 
 namespace Loppemarked
 {
     class Customer 
     {
-        public string customerID { get; set; }
+
         public string customerName { get; set; }
-        public List<string> ItemsPurchesed { get; set; }
-
-        public int bankAccount { get; set; }
+        public List<string> itemsPurchesed { get; set; }
 
 
-        public Customer(string id, string name, int bankAccountnr)
+
+        public Customer(string name)
         {
-            customerID = id;
             customerName = name;
-            ItemsPurchesed = new List<string>();
-            bankAccount = bankAccountnr;
+            itemsPurchesed = new List<string>();
         }
-
-        public void Purchase_item()
+        /*
+        public void PurchaseItem()
         {
-            //while kunden har penger
-            // Hent produkt
-            // Putt produkt inn i kundens handlekurv?
-        }
+            var productBought = ProductFactory.CreateProduct(ProductCategory.LivingRoom);
+            if (productBought != null)
+            {
+                itemsPurchesed.Add(productBought.ToString());
+                Thread.Sleep(1000);
+            }
+            else
+            {
+                Thread.CurrentThread.Join();
+            }
+        } */
 
-        public void Get_item()
+        public void Get_items()
         {
-            //Forhver item i handlekurv
-            //print til consol(item)
+            foreach (var item in itemsPurchesed)
+            {
+                Console.WriteLine(item);
+            }
         }
 
     }

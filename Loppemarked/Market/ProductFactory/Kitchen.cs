@@ -1,44 +1,44 @@
 ﻿using System;
-namespace Loppemarked.Product
+namespace Loppemarked.Market.ProductFactory
 {
-    public class Miscellaneous : IProduct
+    public class Kitchen : IProduct
     {
         private string _name;
         private string _condition;
         private string _material;
 
-        public Miscellaneous(){
-            RandomMiscellaneousProduct();
+        public Kitchen(){
+            RandomKitchenProduct();
         }
 
-        public void RandomMiscellaneousProduct()
+        public void RandomKitchenProduct()
         {
             Random rnd = new Random();
             var randomProduct = rnd.Next(4);
             switch (randomProduct)
             {
                 case 0:
-                    SetName("Pocketknife");
+                    SetName("Mixmaster");
                     SetCondition("Well used");
-                    SetMaterial("Steel");
+                    SetMaterial("Plastic and iron");
                     break;
                 case 1:
-                    SetName("Fishing rod");
-                    SetCondition("Slightly used");
-                    SetMaterial("Metall");
+                    SetName("Cutlery set");
+                    SetCondition("Used");
+                    SetMaterial("Silverware");
                     break;
                 case 2:
-                    SetName("Skateboard");
-                    SetCondition("Used");
-                    SetMaterial("Misc");
+                    SetName("Stainless steel pan");
+                    SetCondition("New");
+                    SetMaterial("Steel");
                     break;
                 case 3:
-                    SetName("Champions league football");
-                    SetCondition("Well kicked");
-                    SetMaterial("Rubber");
+                    SetName("Beer glass");
+                    SetCondition("Used");
+                    SetMaterial("Glass");
                     break;
                 default:
-                    SetName("No item");
+                    SetName("No product");
                     SetCondition("0");
                     SetMaterial("0");
                     break;
@@ -47,7 +47,7 @@ namespace Loppemarked.Product
 
         public string GetCondition()
         {
-            Console.WriteLine("Inside Miscellaneous.condition method");
+           // Console.WriteLine("Inside Kitchen.condition method");
             return _condition;
         }
 
@@ -58,7 +58,7 @@ namespace Loppemarked.Product
 
         public string GetName()
         {
-            Console.WriteLine("Inside Miscellaneous.Name method");
+           // Console.WriteLine("Inside Kitchen.Name method");
             return _name;
         }
 
@@ -69,7 +69,7 @@ namespace Loppemarked.Product
 
         public string GetMaterial()
         {
-            Console.WriteLine("Inside Miscellaneous.Material method");
+           // Console.WriteLine("Inside Kitchen.Material method");
             return _material;
         }
 
@@ -80,8 +80,17 @@ namespace Loppemarked.Product
 
         public bool Is_sold()
         {
-            Console.WriteLine("Inside Miscellaneous.is_sold method");
+          //  Console.WriteLine("Inside Kitchen.is_sold method");
             return true;
+        }
+
+        public string GetSeller()
+        {
+            var random = new Random();
+
+            var nameTypeValues = Enum.GetValues(typeof(Names));
+            var names = (Names)nameTypeValues.GetValue(random.Next(45));
+            return names.ToString();
         }
     }
 }

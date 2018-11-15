@@ -6,12 +6,14 @@ using System.Text;
 namespace Loppemarked
 {
     class Market
-    {
-        public List<Item> itemForSale;
-
+    {     
+        Seller slrr = new Seller();
         public Market()
         {
-            itemForSale = new List<Item>();
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("  Lotta's Loppemarked");
+            Console.WriteLine("--------------------------");
+            slrr.showProducts();
         }
     }
 }

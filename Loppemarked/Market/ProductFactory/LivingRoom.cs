@@ -1,5 +1,6 @@
-﻿using System;
-namespace Loppemarked.Product
+﻿using Loppemarked.Market.Controller;
+using System;
+namespace Loppemarked.Market.ProductFactory
 {
     public class LivingRoom : IProduct
     {
@@ -47,7 +48,7 @@ namespace Loppemarked.Product
 
         public string GetCondition()
         {
-            Console.WriteLine("Inside Livingroom.condition method");
+           // Console.WriteLine("Inside Livingroom.condition method");
             return _condition;
         }
 
@@ -58,7 +59,7 @@ namespace Loppemarked.Product
 
         public string GetName()
         {
-            Console.WriteLine("Inside Livingroom.Name method");
+           // Console.WriteLine("Inside Livingroom.Name method");
             return _name;
         }
 
@@ -69,7 +70,7 @@ namespace Loppemarked.Product
 
         public string GetMaterial()
         {
-            Console.WriteLine("Inside Livingroom.Material method");
+           // Console.WriteLine("Inside Livingroom.Material method");
             return _material;
         }
 
@@ -80,8 +81,17 @@ namespace Loppemarked.Product
 
         public bool Is_sold()
         {
-            Console.WriteLine("Inside Livingroom.is_sold method");
+           // Console.WriteLine("Inside Livingroom.is_sold method");
             return true;
+        }
+
+        public string GetSeller()
+        {
+            var random = new Random();
+
+            var nameTypeValues = Enum.GetValues(typeof(Names));
+            var names = (Names)nameTypeValues.GetValue(random.Next(45));
+            return names.ToString();
         }
     }
 }
