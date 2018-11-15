@@ -10,30 +10,48 @@ namespace Loppemarked
 {
     class Client
     {
+        public static readonly Random rnd = new Random();
+
         private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
-        public void startMarked()
+        public void StartMarked()
         {
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Welcome to Lotta's Flea market");
             Console.WriteLine("----------------------------------\n");
             Console.WriteLine("List of items for sale:");
 
+            /*
             LivingRoom item = new LivingRoom();
-             item.RandomLivingRoomProduct();
+            item.RandomLivingRoomProduct();*/
 
             ProductCategory cat = new ProductCategory();
 
-            // TODO - Hvorfor lager vi flere marketplaces?
-                MarketPlace market = new MarketPlace(cat, 0);
-                MarketPlace market2 = new MarketPlace(cat, 1);
-                MarketPlace market3 = new MarketPlace(cat, 2);
-                MarketPlace market4 = new MarketPlace(cat, 3);
-                MarketPlace market5 = new MarketPlace(cat, 4);
+            // TODO - Hvorfor lager vi så mange markeder?
+            // Burde kanskje lage flere produkter som blir tildelt en selger,
+            // som en kunde kan kjøpe?
+
+            MarketPlace market = new MarketPlace(cat);
+            MarketPlace market_two = new MarketPlace(cat);
+            MarketPlace market_three = new MarketPlace(cat);
+
+            MarketPlace market_four = new MarketPlace(cat);
+            MarketPlace market_five = new MarketPlace(cat);
+
+            /*MarketPlace market = new MarketPlace(cat, 0);
+            MarketPlace market2 = new MarketPlace(cat, 1);
+            MarketPlace market3 = new MarketPlace(cat, 2);
+            MarketPlace market4 = new MarketPlace(cat, 3);
+            MarketPlace market5 = new MarketPlace(cat, 4);*/
 
             // _threadHandler.startThreads();
             Console.ReadLine();
         }
+
+        public void CloseMarket(){
+            // TODO 
+            // Close the market if all items has been listed and sold. 
+            // Go through the seller and customer list for to check if the market is empty. 
+
+        }
     }
-
-
 }

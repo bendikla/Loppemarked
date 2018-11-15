@@ -14,7 +14,7 @@ namespace Loppemarked
     static void Main(string[] args)
         {
             Client start = new Client();
-            start.startMarked();
+            start.StartMarked();
         }
 
         

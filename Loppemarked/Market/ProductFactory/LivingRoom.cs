@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using Loppemarked.Market.Controller;
 
-=======
-﻿using Loppemarked.Market.Controller;
-using System;
->>>>>>> 5aa0b6ea60388d42464a943ddd191e9e3c165f48
 namespace Loppemarked.Market.ProductFactory
 {
     public class LivingRoom : IProduct

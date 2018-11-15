@@ -1,7 +1,7 @@
 using System;
 using System.Configuration;
 using Loppemarked.Market.ProductFactory;
-
+using Loppemarked;
 
 namespace Loppemarked.Market
 {
@@ -15,18 +15,19 @@ namespace Loppemarked.Market
 
         public bool marketPlaceIsOpen = false;
 
-        public MarketPlace(ProductCategory productCategory, int num)
+        public MarketPlace(ProductCategory productCategory, int cases)
         {
-            product = ProductFactory.ProductFactory.CreateProduct(productCategory);
+            product = ProductFactory.ProductFactory.CreateProduct(productCategory, cases);
             Console.WriteLine(product.GetName() + ", " + product.GetCondition() + " " + product.GetMaterial());
+            Console.WriteLine();
+        }
 
-            public MarketPlace(ProductCategory productCategory)
-            {
-                product = ProductFactory.ProductFactory.CreateProduct(productCategory, cases);
+        public MarketPlace(ProductCategory productCategory)
+        {
+            int randomProduct = Client.rnd.Next(4);
+            product = ProductFactory.ProductFactory.CreateProduct((int)productCategory);
 
-                marketPlaceIsOpen = true;
-            }
-
+            marketPlaceIsOpen = true;
         }
     }
 }
