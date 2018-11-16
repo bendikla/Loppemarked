@@ -26,16 +26,9 @@ namespace Loppemarked
 
             ProductCategory cat = new ProductCategory();
 
-            // TODO - Hvorfor lager vi så mange markeder?
-            // Burde kanskje lage flere produkter som blir tildelt en selger,
-            // som en kunde kan kjøpe?
+            // TODO - Skal vi har ett marked med flere kunder som får tilegnet produkter?
 
             MarketPlace market = new MarketPlace(cat);
-            MarketPlace market_two = new MarketPlace(cat);
-            MarketPlace market_three = new MarketPlace(cat);
-
-            MarketPlace market_four = new MarketPlace(cat);
-            MarketPlace market_five = new MarketPlace(cat);
 
             /*MarketPlace market = new MarketPlace(cat, 0);
             MarketPlace market2 = new MarketPlace(cat, 1);
