@@ -57,9 +57,14 @@
     <Compile Include="Market\ProductFactory\ProductCategory.cs" />
     <Compile Include="Market\ProductFactory\ProductFactory.cs" />
     <Compile Include="Market\ProductFactory\Wearable.cs" />
+<<<<<<< HEAD
     <Compile Include="Market\MarketPlaceFacade.cs" />
     <Compile Include="Market\Controller\PrintHandler.cs" />
     <Compile Include="Market\Customer\Customer.cs" />
+=======
+    <Compile Include="Market\MarketPlace.cs" />
+    <Compile Include="PrintMaestro.cs" />
+>>>>>>> parent of 66bf72f... Klasser og printer
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
