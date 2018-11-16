@@ -10,7 +10,7 @@ namespace Loppemarked.Market.Sale
 {
     public class Seller
     {
-        private string _name { get; set; }
+        private  string _name { get; set; }
         private string _itemName { get; set; }
         private List<IProduct> _items { get; set; }
         private IProduct product;
@@ -36,13 +36,14 @@ namespace Loppemarked.Market.Sale
         public  void AddProduct()
         {
             _isSold = true;
-            Console.WriteLine(_name + " have come to sell some items!");
+            Console.WriteLine(_name + " have come to sell some items!\n");
             for (var i = 0; i < _nrItems; i++)
-            {
-                _items.Add(product);
-                Thread.Sleep(500);
+            {   
+                    _items.Add(product);
+                    Console.WriteLine(_name + " have " + _items[0].GetName() + " for sale!");
+                    Thread.Sleep(500);
             }
-            Console.WriteLine(_name + " have " + _itemName + " for sale!");
+            
             Console.WriteLine(_name + " has sold out!");
             _isSold = false;
         }

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Runtime.Remoting;
 using System.Text;
 using System.Threading;
+using Loppemarked.Market;
 using Loppemarked.Market.ProductFactory;
+using Loppemarked.Market.Sale;
 
 namespace Loppemarked
 {
@@ -15,7 +17,7 @@ namespace Loppemarked
         private int _nrOfItems { get; set; }
         public List<IProduct> itemsPurchesed { get; set; }
 
-
+        private Seller seller = MarketPlaceFacade.Sellers[0];
 
         public Customer(string name)
         {
@@ -47,7 +49,7 @@ namespace Loppemarked
 
         public string GetItems()
         {
-            return "Name: " + itemsPurchesed[0].GetName() + ", Condition: " + itemsPurchesed[0].GetCondition() + ", Materials: " + itemsPurchesed[0].GetMaterial() + ".";
+            return "Name: " + itemsPurchesed[0].GetName() + ", Condition: " + itemsPurchesed[0].GetCondition() + ", Materials: " + itemsPurchesed[0].GetMaterial() +  ", From " + seller.GetName() +".";
         }
 
     }

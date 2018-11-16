@@ -21,7 +21,7 @@ namespace Loppemarked
             //printer.PrintProduct();
            // market = new MarketPlaceFacade(cat);
             MarketPlaceFacade.Instance.Create();
-            Console.WriteLine("Press enter to start");
+            Console.WriteLine("\nPress enter to start");
 
             while(Console.ReadKey().Key != ConsoleKey.Enter) { }
             MarketPlaceFacade.Instance.Open();

@@ -19,13 +19,15 @@ namespace Loppemarked.Market
         private static MarketPlaceFacade _instance { get; set; }
         private bool _marketPlaceIsOpen { get; set; }
         public List<Customer> Customers { get; set; }
-        public List<Seller> Sellers { get; set; }
+        public static List<Seller> Sellers { get; set; }
         public List<Thread> CustomerThreads { get; set; }
         public List<Thread> SellerThreads { get; set; }
         private int _nrOfPeople { get; set; }
         private Names _raNames { get; set; }
-       
-        private IProduct _product;
+
+        private int _sellerThread { get; set; }
+        private int _customerThread { get; set; }
+      
 
         private MarketPlaceFacade()
         {
@@ -56,16 +58,15 @@ namespace Loppemarked.Market
         {
             Array names = Enum.GetValues(typeof(Names));
 
-            for (var i = 0; i < _nrOfPeople; i++)
+            int sellers = 4;
+            IProduct one = ProductFactory.ProductFactory.CreateProduct(1);
+
+            for (var i = 0; i < sellers; i++)
             {
                 _raNames = (Names) names.GetValue(Client.rnd.Next(names.Length));
+                AddSeller(_raNames.ToString(), 2, one);
             }
-
-            IProduct one = ProductFactory.ProductFactory.CreateProduct(2);
-
-            ProductCategory str = new ProductCategory();
-
-            AddSeller(_raNames.ToString(), 2, one);
+            
             AddCustomer(_raNames.ToString());
         }
 
@@ -101,15 +102,13 @@ namespace Loppemarked.Market
                             seller.Sell(customer);
                         }
                     }
-                    {
-                        
-                    }
                 }
             }
         }
 
         public void Open()
         {
+            Console.WriteLine("__________________________________");
             Console.WriteLine("\nToday's Flea Market sellers: \n");
             _marketPlaceIsOpen = true;
             
@@ -117,11 +116,15 @@ namespace Loppemarked.Market
             foreach (var thread in SellerThreads)
             {
                 thread.Start();
+                _sellerThread++;
+               // Console.WriteLine("Seller thread started. Nr{0}", _sellerThread);
             }
 
             foreach (var thread in CustomerThreads)
             {
                 thread.Start();
+                _customerThread++;
+               // Console.WriteLine("Customer thread started. Nr{0}".PadLeft(Console.WindowWidth), _customerThread);
             }
             CloseMarket();
         }
@@ -172,7 +175,7 @@ namespace Loppemarked.Market
 
         public void Statistic()
         {
-            Console.WriteLine("\n_______________________");
+            Console.WriteLine("\n________________________________________________________________");
             Console.WriteLine("\nTransactions Recipte:");
             Console.WriteLine("-----------------------");
             Console.WriteLine("Sellers:");
@@ -191,7 +194,7 @@ namespace Loppemarked.Market
 
                 }
             }
-            Console.WriteLine("\n_______________________");
+            Console.WriteLine("\n__________________________________________________________________");
         }
     }
 }
