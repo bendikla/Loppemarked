@@ -58,16 +58,15 @@ namespace Loppemarked.Market
         {
             Array names = Enum.GetValues(typeof(Names));
 
-           // for (var i = 0; i < _nrOfPeople; i++)
-           // {
+            int sellers = 4;
+            IProduct one = ProductFactory.ProductFactory.CreateProduct(1);
+
+            for (var i = 0; i < sellers; i++)
+            {
                 _raNames = (Names) names.GetValue(Client.rnd.Next(names.Length));
-           // }
-
-            IProduct one = ProductFactory.ProductFactory.CreateProduct(2);
-
-          //  ProductCategory str = new ProductCategory();
-
-            AddSeller(_raNames.ToString(), 2, one);
+                AddSeller(_raNames.ToString(), 2, one);
+            }
+            
             AddCustomer(_raNames.ToString());
         }
 
@@ -118,14 +117,14 @@ namespace Loppemarked.Market
             {
                 thread.Start();
                 _sellerThread++;
-                Console.WriteLine("Seller thread started. Nr{0}", _sellerThread);
+               // Console.WriteLine("Seller thread started. Nr{0}", _sellerThread);
             }
 
             foreach (var thread in CustomerThreads)
             {
                 thread.Start();
                 _customerThread++;
-                Console.WriteLine("Customer thread started. Nr{0}".PadLeft(Console.WindowWidth), _customerThread);
+               // Console.WriteLine("Customer thread started. Nr{0}".PadLeft(Console.WindowWidth), _customerThread);
             }
             CloseMarket();
         }
