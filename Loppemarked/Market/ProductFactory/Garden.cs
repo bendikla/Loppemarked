@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+﻿using System;
+using Loppemarked.Market.Controller;
+using Loppemarked.Market.Sale;
+
+=======
 using System;
 using Loppemarked.Market.Controller;
 using Loppemarked.Market.Sale;
 
 
+>>>>>>> origin/bendik
 namespace Loppemarked.Market.ProductFactory
 {
     public class Garden : IProduct
@@ -10,6 +17,7 @@ namespace Loppemarked.Market.ProductFactory
         private string _name;
         private string _condition;
         private string _material;
+        private string _seller;
 
         // TODO create a selection of random items in garden category
         public Garden(){
@@ -50,6 +58,10 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetCondition(){
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Garden.condition method");
+=======
+>>>>>>> origin/bendik
             return _condition;
         }
 
@@ -58,6 +70,10 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetName(){
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Garden.Name method");
+=======
+>>>>>>> origin/bendik
             return _name;
         }
 
@@ -66,6 +82,10 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetMaterial(){
+<<<<<<< HEAD
+          //  Console.WriteLine("Inside Garden.Material method");
+=======
+>>>>>>> origin/bendik
             return _material;
         }
 
@@ -74,6 +94,10 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public bool Is_sold(){
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Garden.is_sold method");
+=======
+>>>>>>> origin/bendik
             return true;
         }
 

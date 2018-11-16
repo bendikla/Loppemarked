@@ -7,6 +7,10 @@ namespace Loppemarked.Market.Controller
 {
     public class PrintHandler
     {
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/bendik
         public PrintHandler()
         {
         }
@@ -15,7 +19,11 @@ namespace Loppemarked.Market.Controller
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Welcome to Lotta's Flea market");
             Console.WriteLine("----------------------------------\n");
+<<<<<<< HEAD
             Console.WriteLine("List of items for sale:");
+=======
+           // Console.WriteLine("List of items for sale:");
+>>>>>>> origin/bendik
         }
 
         public void PrintProduct(IProduct product){

@@ -47,6 +47,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetCondition()
         {
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Wearable.condition method");
+=======
+>>>>>>> origin/bendik
             return _condition;
         }
 
@@ -57,6 +61,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetName()
         {
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Wearable.Name method");
+=======
+>>>>>>> origin/bendik
             return _name;
         }
 
@@ -67,6 +75,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetMaterial()
         {
+<<<<<<< HEAD
+          //  Console.WriteLine("Inside Wearable.Material method");
+=======
+>>>>>>> origin/bendik
             return _material;
         }
 
@@ -77,6 +89,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold()
         {
+<<<<<<< HEAD
+          //  Console.WriteLine("Inside Wearable.is_sold method");
+=======
+>>>>>>> origin/bendik
             return true;
         }
     }

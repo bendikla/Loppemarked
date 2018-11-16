@@ -14,8 +14,17 @@ namespace Loppemarked
     {
     static void Main(string[] args)
         {
+<<<<<<< HEAD
             Client start = new Client();
-            start.StartMarked();
+            start.startMarked();
+=======
+           
+            Client.StartMarked();
+
+            Client.Exit();
+
+
+>>>>>>> origin/bendik
         }
 
         

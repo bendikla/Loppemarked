@@ -6,6 +6,10 @@
 /Users/Benjamin/Documents/Eksamen/Loppemarked/Loppemarked/obj/Debug/Loppemarked.exe
 /Users/Benjamin/Documents/Eksamen/Loppemarked/Loppemarked/obj/Debug/Loppemarked.pdb
 =======
+<<<<<<< HEAD
+C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.exe
+C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.pdb
+=======
 C:/Loppemarked/Loppemarked/bin/Debug/Loppemarked.exe
 C:/Loppemarked/Loppemarked/bin/Debug/Loppemarked.pdb
 C:/Loppemarked/Loppemarked/obj/Debug/Loppemarked.csprojAssemblyReference.cache
@@ -13,9 +17,18 @@ C:/Loppemarked/Loppemarked/obj/Debug/Loppemarked.csproj.CoreCompileInputs.cache
 C:/Loppemarked/Loppemarked/obj/Debug/Loppemarked.exe
 C:/Loppemarked/Loppemarked/obj/Debug/Loppemarked.pdb
 >>>>>>> dc1b15b93e607560cd210bbeaf0c01d4fe932b63
+>>>>>>> origin/bendik
 C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csprojAssemblyReference.cache
 C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csproj.CoreCompileInputs.cache
 C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.exe
 C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.pdb
+<<<<<<< HEAD
+>>>>>>> dc1b15b93e607560cd210bbeaf0c01d4fe932b63
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csprojAssemblyReference.cache
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csproj.CoreCompileInputs.cache
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.exe
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.pdb
+=======
 C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.exe
 C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.pdb
+>>>>>>> origin/bendik

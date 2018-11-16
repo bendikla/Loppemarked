@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+﻿using Loppemarked.Market.Controller;
+using System;
+=======
 using System;
 using Loppemarked.Market.Controller;
 
+>>>>>>> origin/bendik
 namespace Loppemarked.Market.ProductFactory
 {
     public class LivingRoom : IProduct
@@ -48,6 +53,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetCondition()
         {
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Livingroom.condition method");
+=======
+>>>>>>> origin/bendik
             return _condition;
         }
 
@@ -58,6 +67,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetName()
         {
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Livingroom.Name method");
+=======
+>>>>>>> origin/bendik
             return _name;
         }
 
@@ -68,6 +81,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetMaterial()
         {
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Livingroom.Material method");
+=======
+>>>>>>> origin/bendik
             return _material;
         }
 
@@ -78,6 +95,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold()
         {
+<<<<<<< HEAD
+           // Console.WriteLine("Inside Livingroom.is_sold method");
+=======
+>>>>>>> origin/bendik
             return true;
         }
 

@@ -45,7 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+<<<<<<< HEAD
+    <Compile Include="Customer.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Market\Controller\Names.cs" />
+    <Compile Include="Market\Controller\ThreadHandler.cs" />
+=======
+    <Compile Include="Market\Controller\Names.cs" />
+>>>>>>> origin/bendik
     <Compile Include="Market\Sale\Seller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,9 +64,13 @@
     <Compile Include="Market\ProductFactory\ProductCategory.cs" />
     <Compile Include="Market\ProductFactory\ProductFactory.cs" />
     <Compile Include="Market\ProductFactory\Wearable.cs" />
+<<<<<<< HEAD
+    <Compile Include="Market\MarketPlace.cs" />
+=======
     <Compile Include="Market\MarketPlaceFacade.cs" />
     <Compile Include="Market\Controller\PrintHandler.cs" />
     <Compile Include="Market\Customer\Customer.cs" />
+>>>>>>> origin/bendik
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
