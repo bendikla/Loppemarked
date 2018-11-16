@@ -13,13 +13,12 @@ namespace Loppemarked
       //  ProductCategory cat;
        // MarketPlaceFacade market;
         public static readonly Random rnd = new Random();
-       // PrintHandler printer = new PrintHandler();
-
-       // private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
+        // private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
         public static void StartMarked()
         {
-          //  printer.PrintWelcomeText();
-          //  cat = new ProductCategory();
+            PrintHandler printer = new PrintHandler();
+            printer.PrintWelcomeText();
+            //printer.PrintProduct();
            // market = new MarketPlaceFacade(cat);
             MarketPlaceFacade.Instance.Create();
             Console.WriteLine("Press enter to start");
