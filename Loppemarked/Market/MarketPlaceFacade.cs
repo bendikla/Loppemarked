@@ -24,7 +24,8 @@ namespace Loppemarked.Market
         public List<Thread> SellerThreads { get; set; }
         private int _nrOfPeople { get; set; }
         private Names _raNames { get; set; }
-        private Random _rnd { get; set; }
+       
+        private IProduct _product;
 
         private MarketPlaceFacade()
         {
@@ -50,11 +51,6 @@ namespace Loppemarked.Market
                 }
             }
         }
-      /*  public MarketPlaceFacade(ProductCategory productCategory)
-        {
-            IProduct one = ProductFactory.ProductFactory.CreateProduct(10);
-            _marketPlaceIsOpen = true;
-        } */
 
         public void Create()
         {
@@ -62,14 +58,17 @@ namespace Loppemarked.Market
 
             for (var i = 0; i < _nrOfPeople; i++)
             {
-                _raNames = (Names) names.GetValue(_rnd.Next(names.Length));
+                _raNames = (Names) names.GetValue(Client.rnd.Next(names.Length));
             }
 
-            IProduct one = ProductFactory.ProductFactory.CreateProduct(1);
+            IProduct one = ProductFactory.ProductFactory.CreateProduct(2);
 
-            AddSeller(_raNames.ToString(), 1, one);
+            ProductCategory str = new ProductCategory();
+
+            AddSeller(_raNames.ToString(), 2, one);
             AddCustomer(_raNames.ToString());
         }
+
 
         public void AddSeller(string name, int total, IProduct product)
         {
@@ -111,8 +110,9 @@ namespace Loppemarked.Market
 
         public void Open()
         {
-            Console.WriteLine("\nToday's Flea Market items: \n");
+            Console.WriteLine("\nToday's Flea Market sellers: \n");
             _marketPlaceIsOpen = true;
+            
 
             foreach (var thread in SellerThreads)
             {
@@ -126,9 +126,6 @@ namespace Loppemarked.Market
             CloseMarket();
         }
 
-        public void CheckToCloseMarket(){
-            //TODO check if the market should close and call "CloseMarket()" method.
-        }
         public void CloseMarket()
         {
             bool close = false;

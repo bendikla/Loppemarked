@@ -24,7 +24,7 @@ namespace Loppemarked.Market.Sale
             _name = name;
             _nrItems = total;
             _items = new List<IProduct>();
-            Console.WriteLine(_name + "Have come to the flea market to trade!");
+            Console.WriteLine(_name + " have come to the flea market to trade!");
             this.product = product;
         }
 
@@ -36,19 +36,20 @@ namespace Loppemarked.Market.Sale
         public  void AddProduct()
         {
             _isSold = true;
-            Console.WriteLine(_name + " have come to sell: " + _items[0].ToString());
+            Console.WriteLine(_name + " have come to sell some items!");
             for (var i = 0; i < _nrItems; i++)
             {
                 _items.Add(product);
                 Thread.Sleep(500);
             }
+            Console.WriteLine(_name + " have " + _itemName + " for sale!");
             Console.WriteLine(_name + " has sold out!");
             _isSold = false;
         }
 
         public void Sell(Customer customer)
         {
-            string str = customer.GetName() + "bought item#" + _items[0].ToString() + " from " + _name;
+            string str = customer.GetName() + " bought item# " + _items[0].GetName() + " from " + _name;
             customer.AddItems(_items[0]);
             Console.WriteLine(str.PadLeft(Console.WindowWidth));
             _items.RemoveAt(0);
