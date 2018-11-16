@@ -10,7 +10,6 @@ namespace Loppemarked.Market.ProductFactory
         private string _name;
         private string _condition;
         private string _material;
-        private string _seller;
 
         // TODO create a selection of random items in garden category
         public Garden(){

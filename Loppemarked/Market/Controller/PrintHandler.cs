@@ -24,13 +24,24 @@ namespace Loppemarked.Market.Controller
         }
 
         //TODO write method for seller print
-        public void PrintSalesList(){
+        public void PrintSellerList(){
 
         }
 
         // TODO write method for purchase print
-        public void PrintPurchaseList(){
+        public void PrintCustomerList(){
 
+        }
+
+        public void PrintMarketClose(){
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("All inventory has been sold.");
+            Console.WriteLine("----------------------------------");
+        }
+
+        public void FailedToOpenMarket(){
+            Console.WriteLine("Failed to open market.");
+            Console.WriteLine("----------------------------------");
         }
     }
 }
