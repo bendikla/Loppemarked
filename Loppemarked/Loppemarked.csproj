@@ -61,7 +61,7 @@
     <Compile Include="Market\ProductFactory\ProductFactory.cs" />
     <Compile Include="Market\ProductFactory\Wearable.cs" />
     <Compile Include="Market\MarketPlace.cs" />
-    <Compile Include="PrintMaestro.cs" />
+    <Compile Include="Market\Controller\PrintHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
