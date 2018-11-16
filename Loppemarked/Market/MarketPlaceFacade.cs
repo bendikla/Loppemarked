@@ -177,7 +177,7 @@ namespace Loppemarked.Market
         public void Statistic()
         {
             Console.WriteLine("\n________________________________________________________________");
-            Console.WriteLine("\nTransactions Recipte:");
+            Console.WriteLine("\nTransactions receipt:");
             Console.WriteLine("-----------------------");
             Console.WriteLine("Sellers:");
             foreach (var seller in Sellers)
@@ -189,18 +189,15 @@ namespace Loppemarked.Market
             foreach (var customer in Customers)
             {
                 int count = 0;
-                Console.WriteLine("\n" + customer.GetName() + ": Bought items: " + customer.GetProductsBought());
+                Console.WriteLine("\n" + customer.GetName() + ": Bought {0} items.", customer.GetProductsBought());
 
-                for (var i = 0; i < customer.GetProductsBought(); i++)
-                {               
-                    
-                    Console.WriteLine(Customers[count].itemsPurchesed[i].GetName());
-                }
+            for (var i = 0; i < customer.GetProductsBought(); i++)
+            {               
 
-                count++;
-                
+                Console.WriteLine(Customers[count].itemsPurchased[i].GetName());
             }
-            
+            count++;    
+            }
             Console.WriteLine("\n__________________________________________________________________");
         }
     }

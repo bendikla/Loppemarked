@@ -15,14 +15,14 @@ namespace Loppemarked
 
         private string _name { get; set; }
         private int _nrOfItems { get; set; }
-        public List<IProduct> itemsPurchesed { get; set; }
+        public List<IProduct> itemsPurchased { get; set; }
 
         private Seller seller = MarketPlaceFacade.Sellers[0];
 
         public Customer(string name)
         {
             _name = name;
-            itemsPurchesed = new List<IProduct>();
+            itemsPurchased = new List<IProduct>();
             Console.WriteLine("Customer: " + _name);
         }
         
@@ -38,7 +38,7 @@ namespace Loppemarked
 
         public void AddItems(IProduct product)
         {
-            itemsPurchesed.Add(product);
+            itemsPurchased.Add(product);
             _nrOfItems++;
         }
 
@@ -49,7 +49,7 @@ namespace Loppemarked
 
         public string GetItems()
         {
-            return "Name: " + itemsPurchesed[0].GetName() + ", Condition: " + itemsPurchesed[0].GetCondition() + ", Materials: " + itemsPurchesed[0].GetMaterial() +  ", From " + seller.GetName() +".";
+            return "Name: " + itemsPurchased[0].GetName() + ", Condition: " + itemsPurchased[0].GetCondition() + ", Materials: " + itemsPurchased[0].GetMaterial() +  ", From " + seller.GetName() +".";
         }
 
     }
