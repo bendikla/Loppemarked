@@ -1,4 +1,6 @@
-﻿using System;
+using System;
+using Loppemarked.Market.Controller;
+
 namespace Loppemarked.Market.ProductFactory
 {
     public class Kitchen : IProduct
@@ -13,8 +15,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public void RandomKitchenProduct()
         {
-            Random rnd = new Random();
-            var randomProduct = rnd.Next(4);
+            var randomProduct = Client.rnd.Next(4);
             switch (randomProduct)
             {
                 case 0:
@@ -47,7 +48,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetCondition()
         {
-           // Console.WriteLine("Inside Kitchen.condition method");
             return _condition;
         }
 
@@ -58,7 +58,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetName()
         {
-           // Console.WriteLine("Inside Kitchen.Name method");
             return _name;
         }
 
@@ -69,7 +68,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetMaterial()
         {
-           // Console.WriteLine("Inside Kitchen.Material method");
             return _material;
         }
 
@@ -80,7 +78,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold()
         {
-          //  Console.WriteLine("Inside Kitchen.is_sold method");
             return true;
         }
 

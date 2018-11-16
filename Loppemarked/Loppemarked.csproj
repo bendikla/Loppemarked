@@ -45,8 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Item.cs" />
     <Compile Include="Market\Controller\Names.cs" />
     <Compile Include="Market\Controller\ThreadHandler.cs" />
     <Compile Include="Market\Sale\Seller.cs" />
@@ -60,10 +58,15 @@
     <Compile Include="Market\ProductFactory\ProductCategory.cs" />
     <Compile Include="Market\ProductFactory\ProductFactory.cs" />
     <Compile Include="Market\ProductFactory\Wearable.cs" />
-    <Compile Include="Market\MarketPlace.cs" />
+    <Compile Include="Market\MarketPlaceFacade.cs" />
+    <Compile Include="Market\Controller\PrintHandler.cs" />
+    <Compile Include="Market\Customer\Customer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Market\Customer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
