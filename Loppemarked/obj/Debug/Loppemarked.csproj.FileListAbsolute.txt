@@ -13,3 +13,9 @@ C:/Loppemarked/Loppemarked/obj/Debug/Loppemarked.csproj.CoreCompileInputs.cache
 C:/Loppemarked/Loppemarked/obj/Debug/Loppemarked.exe
 C:/Loppemarked/Loppemarked/obj/Debug/Loppemarked.pdb
 >>>>>>> dc1b15b93e607560cd210bbeaf0c01d4fe932b63
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csprojAssemblyReference.cache
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csproj.CoreCompileInputs.cache
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.exe
+C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.pdb
+C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.exe
+C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.pdb

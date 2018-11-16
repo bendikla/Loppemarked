@@ -15,7 +15,7 @@ namespace Loppemarked
         public static readonly Random rnd = new Random();
         PrintHandler printer = new PrintHandler();
 
-        private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
+       // private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
         public void StartMarked()
         {
             printer.PrintWelcomeText();

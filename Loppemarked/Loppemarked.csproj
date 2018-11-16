@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="Client.cs" />
     <Compile Include="Market\Controller\Names.cs" />
-    <Compile Include="Market\Controller\ThreadHandler.cs" />
     <Compile Include="Market\Sale\Seller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,8 +64,6 @@
   <ItemGroup>
     <Compile Include="Test.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Market\Customer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
