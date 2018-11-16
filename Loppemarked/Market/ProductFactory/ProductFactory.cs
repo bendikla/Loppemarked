@@ -3,31 +3,45 @@ namespace Loppemarked.Market.ProductFactory
 {
     public class ProductFactory
     {
-        public ProductFactory(){}
+        public ProductFactory(){
+        }
 
-        public static IProduct CreateProduct(ProductCategory category){
+        public static IProduct CreateProduct(ProductCategory category, int cases){
             IProduct product = null;
-            switch(category)
+            
+
+            switch (cases)
             {
-                case ProductCategory.Garden:
+                case 0:
                     product = new Garden();
-                    Console.WriteLine("Garden product created.");
+                    Console.WriteLine("Name: " + product.GetName() + ", Condition:" + " " + product.GetCondition()
+                                      + ", Material:" + " " + product.GetMaterial() +", Avaliable:" + " " + product.Is_sold() + ".");
                     break;
-                case ProductCategory.Kitchen:
+                case 1:
                     product = new Kitchen();
-                    Console.WriteLine("Kitchen product created.");
+                    Console.WriteLine("Name: " + product.GetName() + ", Condition:" + " " + product.GetCondition()
+                                      + ", Material:" + " " + product.GetMaterial() + ", Avaliable:" + " " + product.Is_sold() + ".");
                     break;
-                case ProductCategory.LivingRoom:
+
+                case 2:
                     product = new LivingRoom();
-                    Console.WriteLine("Living room product created");
+                    Console.WriteLine("Name: " + product.GetName() + ", Condition:" + " " + product.GetCondition()
+                                      + ", Material:" + " " + product.GetMaterial() + ", Avaliable:" + " " + product.Is_sold() + ".");
                     break;
-                case ProductCategory.Miscellaneous:
+
+                case 3:
                     product = new Miscellaneous();
-                    Console.WriteLine("Miscellaneous product created.");
+                    Console.WriteLine("Name: " + product.GetName() + ", Condition:" + " " + product.GetCondition()
+                                      + ", Material:" + " " + product.GetMaterial() + ", Avaliable:" + " " + product.Is_sold() + ".");
                     break;
-                case ProductCategory.Wearable:
+
+                case 4:
                     product = new Wearable();
-                    Console.WriteLine("Wearable product created.");
+                    Console.WriteLine("Name: " + product.GetName() + ", Condition:" + " " + product.GetCondition()
+                                      + ", Material:" + " " + product.GetMaterial() + ", Avaliable:" + " " + product.Is_sold() + ".");
+                    break;
+
+                default:
                     break;
             }
             return product;
