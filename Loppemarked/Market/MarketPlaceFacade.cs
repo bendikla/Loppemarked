@@ -6,7 +6,7 @@ using Loppemarked;
 namespace Loppemarked.Market
 {
 
-    public class MarketPlace
+    public class MarketPlaceFacade
     {
 
         public string name { get; set; }
@@ -15,7 +15,7 @@ namespace Loppemarked.Market
         public bool marketPlaceIsOpen = false;
 
 
-        public MarketPlace(ProductCategory productCategory)
+        public MarketPlaceFacade(ProductCategory productCategory)
         {
             IProduct one = ProductFactory.ProductFactory.CreateProduct(20);
 

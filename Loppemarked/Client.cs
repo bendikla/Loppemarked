@@ -11,7 +11,7 @@ namespace Loppemarked
     class Client
     {
         ProductCategory cat;
-        MarketPlace market;
+        MarketPlaceFacade market;
         public static readonly Random rnd = new Random();
         PrintHandler printer = new PrintHandler();
 
@@ -21,7 +21,7 @@ namespace Loppemarked
             printer.PrintWelcomeText();
 
             cat = new ProductCategory();
-            market = new MarketPlace(cat);
+            market = new MarketPlaceFacade(cat);
 
             // _threadHandler.startThreads();
             Console.ReadLine();

@@ -10,7 +10,8 @@ namespace Loppemarked.Market.Sale
     {
         public string name { get; private set; }
 
-        public ConcurrentBag<Item> forSale = new ConcurrentBag<Item>();
+        // TODO Make so seller receives products
+        //public ConcurrentBag<Item> forSale = new ConcurrentBag<Item>();
 
         public Seller(string name)
         {
@@ -24,13 +25,13 @@ namespace Loppemarked.Market.Sale
             
         }
 
-        public void showProducts()
+        /*public void showProducts()
         {
 
             foreach (var item in forSale)
             {
                 Console.WriteLine("For sale: {0}, condition: {1}, sold from {2}", item.itemName, item.itemCondition, item.sellerName);
             }
-        }
+        }*/
     }
 }
