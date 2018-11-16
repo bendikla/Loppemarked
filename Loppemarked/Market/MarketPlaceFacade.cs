@@ -59,12 +59,13 @@ namespace Loppemarked.Market
             Array names = Enum.GetValues(typeof(Names));
 
             int sellers = 4;
-            IProduct one = ProductFactory.ProductFactory.CreateProduct(1);
+            
 
             for (var i = 0; i < sellers; i++)
             {
+                IProduct one = ProductFactory.ProductFactory.CreateProduct(1);
                 _raNames = (Names) names.GetValue(Client.rnd.Next(names.Length));
-                AddSeller(_raNames.ToString(), 2, one);
+                AddSeller(_raNames.ToString(), 1, one);
             }
             
             AddCustomer(_raNames.ToString());
@@ -187,13 +188,19 @@ namespace Loppemarked.Market
             Console.WriteLine("Customers:");
             foreach (var customer in Customers)
             {
+                int count = 0;
                 Console.WriteLine("\n" + customer.GetName() + ": Bought items: " + customer.GetProductsBought());
-                for (var i = 0; i < customer.GetProductsBought(); i++)
-                {
-                    Console.WriteLine(customer.GetItems());
 
+                for (var i = 0; i < customer.GetProductsBought(); i++)
+                {               
+                    
+                    Console.WriteLine(Customers[count].itemsPurchesed[i].GetName());
                 }
+
+                count++;
+                
             }
+            
             Console.WriteLine("\n__________________________________________________________________");
         }
     }
