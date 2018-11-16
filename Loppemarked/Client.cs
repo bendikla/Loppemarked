@@ -8,21 +8,26 @@ using Loppemarked.Market.ProductFactory;
 
 namespace Loppemarked
 {
-    class Client
+     public static class Client
     {
-        ProductCategory cat;
-        MarketPlaceFacade market;
+      //  ProductCategory cat;
+       // MarketPlaceFacade market;
         public static readonly Random rnd = new Random();
-        PrintHandler printer = new PrintHandler();
-
-       // private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
-        public void StartMarked()
+        // private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
+        public static void StartMarked()
         {
+            PrintHandler printer = new PrintHandler();
             printer.PrintWelcomeText();
-            cat = new ProductCategory();
-            market = new MarketPlaceFacade(cat);
+            //printer.PrintProduct();
+           // market = new MarketPlaceFacade(cat);
+            MarketPlaceFacade.Instance.Create();
+            Console.WriteLine("\nPress enter to start");
 
-            if(market != null){
+            while(Console.ReadKey().Key != ConsoleKey.Enter) { }
+            MarketPlaceFacade.Instance.Open();
+
+/*
+            if (market != null){
                 //TODO ta vekk kommentering når liste-printingen er fullført.
                 //printer.PrintWelcomeText();
             } else{
@@ -30,11 +35,17 @@ namespace Loppemarked
             }
 
            
-            if(market.marketPlaceIsOpen == false){
-                printer.PrintMarketClose();
-            }
+         //   if(market.marketPlaceIsOpen == false){
+         //       printer.PrintMarketClose();
+         //   }
             // _threadHandler.startThreads();
-            Console.ReadLine();
+            Console.ReadLine(); */
+        }
+        public static void Exit()
+        {
+            Console.WriteLine("Press space to exit flea market");
+            while (Console.ReadKey().Key != ConsoleKey.Spacebar) { }
+            Environment.Exit(0);
         }
 
     }

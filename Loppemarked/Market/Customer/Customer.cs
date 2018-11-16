@@ -4,23 +4,25 @@ using System.Linq;
 using System.Runtime.Remoting;
 using System.Text;
 using System.Threading;
+using Loppemarked.Market;
 using Loppemarked.Market.ProductFactory;
+using Loppemarked.Market.Sale;
 
 namespace Loppemarked
 {
-    class Customer 
+    public class Customer 
     {
 
         private string _name { get; set; }
         private int _nrOfItems { get; set; }
-        public List<ProductFactory> itemsPurchesed { get; set; }
+        public List<IProduct> itemsPurchesed { get; set; }
 
-
+        private Seller seller = MarketPlaceFacade.Sellers[0];
 
         public Customer(string name)
         {
             _name = name;
-            itemsPurchesed = new List<ProductFactory>();
+            itemsPurchesed = new List<IProduct>();
             Console.WriteLine("Customer: " + _name);
         }
         
@@ -34,9 +36,10 @@ namespace Loppemarked
             return _name;
         }
 
-        public void AddItems(List<ProductFactory> product)
+        public void AddItems(IProduct product)
         {
-            itemsPurchesed.Add(product[0]);
+            itemsPurchesed.Add(product);
+            _nrOfItems++;
         }
 
         public int GetProductsBought()
@@ -44,12 +47,9 @@ namespace Loppemarked
             return _nrOfItems;
         }
 
-        public void getItems()
+        public string GetItems()
         {
-            for (var i = 0; i < itemsPurchesed.Count(); i++)
-            {
-                Console.WriteLine(itemsPurchesed[i]);
-            }
+            return "Name: " + itemsPurchesed[0].GetName() + ", Condition: " + itemsPurchesed[0].GetCondition() + ", Materials: " + itemsPurchesed[0].GetMaterial() +  ", From " + seller.GetName() +".";
         }
 
     }
