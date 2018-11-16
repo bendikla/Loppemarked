@@ -10,30 +10,32 @@ namespace Loppemarked
 {
     class Client
     {
-        private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
-        public void startMarked()
+        ProductCategory cat;
+        MarketPlaceFacade market;
+        public static readonly Random rnd = new Random();
+        PrintHandler printer = new PrintHandler();
+
+       // private ThreadHandler _threadHandler = new ThreadHandler(6, 6);
+        public void StartMarked()
         {
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("Welcome to Lotta's Flea market");
-            Console.WriteLine("----------------------------------\n");
-            Console.WriteLine("List of items for sale:");
+            printer.PrintWelcomeText();
+            cat = new ProductCategory();
+            market = new MarketPlaceFacade(cat);
 
-            LivingRoom item = new LivingRoom();
-             item.RandomLivingRoomProduct();
+            if(market != null){
+                //TODO ta vekk kommentering når liste-printingen er fullført.
+                //printer.PrintWelcomeText();
+            } else{
+                printer.FailedToOpenMarket();
+            }
 
-            ProductCategory cat = new ProductCategory();
-
-
-                MarketPlace market = new MarketPlace(cat, 0);
-                MarketPlace market2 = new MarketPlace(cat, 1);
-                MarketPlace market3 = new MarketPlace(cat, 2);
-                MarketPlace market4 = new MarketPlace(cat, 3);
-                MarketPlace market5 = new MarketPlace(cat, 4);
-
+           
+            if(market.marketPlaceIsOpen == false){
+                printer.PrintMarketClose();
+            }
             // _threadHandler.startThreads();
             Console.ReadLine();
         }
+
     }
-
-
 }

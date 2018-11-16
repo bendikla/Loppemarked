@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using Loppemarked.Market.Controller;
 using Loppemarked.Market.Sale;
+
 
 namespace Loppemarked.Market.ProductFactory
 {
@@ -9,7 +10,6 @@ namespace Loppemarked.Market.ProductFactory
         private string _name;
         private string _condition;
         private string _material;
-        private string _seller;
 
         // TODO create a selection of random items in garden category
         public Garden(){
@@ -18,8 +18,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public void RandomGardenProduct()
         {
-            Random rnd = new Random();
-            var randomProduct = rnd.Next(4);
+            var randomProduct = Client.rnd.Next(4);
             switch (randomProduct)
             {
                 case 0:
@@ -51,7 +50,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetCondition(){
-           // Console.WriteLine("Inside Garden.condition method");
             return _condition;
         }
 
@@ -60,7 +58,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetName(){
-           // Console.WriteLine("Inside Garden.Name method");
             return _name;
         }
 
@@ -69,7 +66,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public string GetMaterial(){
-          //  Console.WriteLine("Inside Garden.Material method");
             return _material;
         }
 
@@ -78,7 +74,6 @@ namespace Loppemarked.Market.ProductFactory
         }
 
         public bool Is_sold(){
-           // Console.WriteLine("Inside Garden.is_sold method");
             return true;
         }
 
