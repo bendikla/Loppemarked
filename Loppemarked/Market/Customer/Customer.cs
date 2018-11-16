@@ -11,36 +11,44 @@ namespace Loppemarked
     class Customer 
     {
 
-        public string customerName { get; set; }
-        public List<string> itemsPurchesed { get; set; }
+        private string _name { get; set; }
+        private int _nrOfItems { get; set; }
+        public List<ProductFactory> itemsPurchesed { get; set; }
 
 
 
         public Customer(string name)
         {
-            customerName = name;
-            itemsPurchesed = new List<string>();
+            _name = name;
+            itemsPurchesed = new List<ProductFactory>();
+            Console.WriteLine("Customer: " + _name);
         }
-        /*
+        
         public void PurchaseItem()
         {
-            var productBought = ProductFactory.CreateProduct(ProductCategory.LivingRoom);
-            if (productBought != null)
-            {
-                itemsPurchesed.Add(productBought.ToString());
-                Thread.Sleep(1000);
-            }
-            else
-            {
-                Thread.CurrentThread.Join();
-            }
-        } */
+            Market.MarketPlaceFacade.Instance.Transaction(this);
+        }
 
-        public void Get_items()
+        public string GetName()
         {
-            foreach (var item in itemsPurchesed)
+            return _name;
+        }
+
+        public void AddItems(List<ProductFactory> product)
+        {
+            itemsPurchesed.Add(product[0]);
+        }
+
+        public int GetProductsBought()
+        {
+            return _nrOfItems;
+        }
+
+        public void getItems()
+        {
+            for (var i = 0; i < itemsPurchesed.Count(); i++)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(itemsPurchesed[i]);
             }
         }
 
