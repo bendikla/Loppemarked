@@ -62,11 +62,5 @@ namespace Loppemarked.Market.ProductFactory
             }
             return product;
         }
-
-        public override string ToString()
-        {
-            return "Name: " + product.GetName() + " " + "Condition: " + product.GetCondition() + " " + "Metarials: " +
-                   product.GetMaterial();
-        }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using Loppemarked.Market.Controller;
 using Loppemarked.Market.Sale;
 
@@ -10,6 +11,7 @@ namespace Loppemarked.Market.ProductFactory
         private string _name;
         private string _condition;
         private string _material;
+        private string _seller;
 
         // TODO create a selection of random items in garden category
         public Garden(){
@@ -75,15 +77,6 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold(){
             return true;
-        }
-
-        public string GetSeller()
-        {
-           var random = new Random();
-
-            var nameTypeValues = Enum.GetValues(typeof(Names));
-            var names = (Names) nameTypeValues.GetValue(random.Next(45));
-            return names.ToString();
         }
     }
 }

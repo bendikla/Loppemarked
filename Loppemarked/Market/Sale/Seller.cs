@@ -10,14 +10,14 @@ namespace Loppemarked.Market.Sale
 {
     public class Seller
     {
-        private string _name { get; set; }
+        private  string _name { get; set; }
         private string _itemName { get; set; }
         private List<IProduct> _items { get; set; }
         private IProduct product;
         private int _nrItems { get; set; }
         private bool _isSold { get; set; }
         // TODO Make so seller receives products
-        //public ConcurrentBag<Item> forSale = new ConcurrentBag<Item>();
+        private int _count { get; set; }
 
         public Seller(string name, int total, IProduct product)
         {
@@ -26,6 +26,7 @@ namespace Loppemarked.Market.Sale
             _items = new List<IProduct>();
             Console.WriteLine(_name + " have come to the flea market to trade!");
             this.product = product;
+            _count = 0;
         }
 
         public string GetName()
@@ -36,23 +37,28 @@ namespace Loppemarked.Market.Sale
         public  void AddProduct()
         {
             _isSold = true;
-            Console.WriteLine(_name + " have come to sell some items!");
+            Console.WriteLine(_name + " have come to sell some items!\n");
             for (var i = 0; i < _nrItems; i++)
-            {
-                _items.Add(product);
-                Thread.Sleep(500);
+            {   
+                    _items.Add(product);
+                    Console.WriteLine(_name + " have " + _items[0].GetName() + " for sale!");
+                    Thread.Sleep(500);
             }
-            Console.WriteLine(_name + " have " + _itemName + " for sale!");
+            
             Console.WriteLine(_name + " has sold out!");
             _isSold = false;
         }
 
         public void Sell(Customer customer)
         {
-            string str = customer.GetName() + " bought item# " + _items[0].GetName() + " from " + _name;
-            customer.AddItems(_items[0]);
-            Console.WriteLine(str.PadLeft(Console.WindowWidth));
-            _items.RemoveAt(0);
+            for (var i = 0; i <= _count; i++)
+            {
+                string str = customer.GetName() + " bought item# " + _items[i].GetName() + " from " + _name;
+                customer.AddItems(_items[i]);
+                Console.WriteLine(str.PadLeft(Console.WindowWidth));
+                _items.RemoveAt(i);
+            }
+            _count++;
         }
 
         
