@@ -37,6 +37,10 @@ namespace Loppemarked
         public void AddItems(IProduct product)
         {
             itemsPurchesed.Add(product);
+<<<<<<< HEAD
+=======
+            _nrOfItems++;
+>>>>>>> origin/bendik
         }
 
         public int GetProductsBought()
@@ -46,7 +50,11 @@ namespace Loppemarked
 
         public string GetItems()
         {
+<<<<<<< HEAD
             return itemsPurchesed[0].ToString();
+=======
+            return "Name: " + itemsPurchesed[0].GetName() + ", Condition: " + itemsPurchesed[0].GetCondition() + ", Materials: " + itemsPurchesed[0].GetMaterial() + ".";
+>>>>>>> origin/bendik
         }
 
     }

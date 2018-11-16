@@ -24,7 +24,12 @@ namespace Loppemarked.Market
         public List<Thread> SellerThreads { get; set; }
         private int _nrOfPeople { get; set; }
         private Names _raNames { get; set; }
+<<<<<<< HEAD
         private Random _rnd { get; set; }
+=======
+       
+        private IProduct _product;
+>>>>>>> origin/bendik
 
         private MarketPlaceFacade()
         {
@@ -50,11 +55,14 @@ namespace Loppemarked.Market
                 }
             }
         }
+<<<<<<< HEAD
       /*  public MarketPlaceFacade(ProductCategory productCategory)
         {
             IProduct one = ProductFactory.ProductFactory.CreateProduct(10);
             _marketPlaceIsOpen = true;
         } */
+=======
+>>>>>>> origin/bendik
 
         public void Create()
         {
@@ -62,6 +70,7 @@ namespace Loppemarked.Market
 
             for (var i = 0; i < _nrOfPeople; i++)
             {
+<<<<<<< HEAD
                 _raNames = (Names) names.GetValue(_rnd.Next(names.Length));
             }
 
@@ -71,6 +80,20 @@ namespace Loppemarked.Market
             AddCustomer(_raNames.ToString());
         }
 
+=======
+                _raNames = (Names) names.GetValue(Client.rnd.Next(names.Length));
+            }
+
+            IProduct one = ProductFactory.ProductFactory.CreateProduct(2);
+
+            ProductCategory str = new ProductCategory();
+
+            AddSeller(_raNames.ToString(), 2, one);
+            AddCustomer(_raNames.ToString());
+        }
+
+
+>>>>>>> origin/bendik
         public void AddSeller(string name, int total, IProduct product)
         {
             Seller seller = new Seller(name, total,product);
@@ -111,8 +134,14 @@ namespace Loppemarked.Market
 
         public void Open()
         {
+<<<<<<< HEAD
             Console.WriteLine("\nToday's Flea Market items: \n");
             _marketPlaceIsOpen = true;
+=======
+            Console.WriteLine("\nToday's Flea Market sellers: \n");
+            _marketPlaceIsOpen = true;
+            
+>>>>>>> origin/bendik
 
             foreach (var thread in SellerThreads)
             {
@@ -126,9 +155,12 @@ namespace Loppemarked.Market
             CloseMarket();
         }
 
+<<<<<<< HEAD
         public void CheckToCloseMarket(){
             //TODO check if the market should close and call "CloseMarket()" method.
         }
+=======
+>>>>>>> origin/bendik
         public void CloseMarket()
         {
             bool close = false;

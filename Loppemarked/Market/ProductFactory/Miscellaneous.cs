@@ -1,4 +1,6 @@
 ﻿using System;
+using Loppemarked.Market.Controller;
+
 namespace Loppemarked.Market.ProductFactory
 {
     public class Miscellaneous : IProduct
@@ -13,8 +15,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public void RandomMiscellaneousProduct()
         {
-            Random rnd = new Random();
-            var randomProduct = rnd.Next(4);
+            var randomProduct = Client.rnd.Next(4);
             switch (randomProduct)
             {
                 case 0:
@@ -47,7 +48,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetCondition()
         {
+<<<<<<< HEAD
           //  Console.WriteLine("Inside Miscellaneous.condition method");
+=======
+>>>>>>> origin/bendik
             return _condition;
         }
 
@@ -58,7 +62,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetName()
         {
+<<<<<<< HEAD
           //  Console.WriteLine("Inside Miscellaneous.Name method");
+=======
+>>>>>>> origin/bendik
             return _name;
         }
 
@@ -69,7 +76,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public string GetMaterial()
         {
+<<<<<<< HEAD
           //  Console.WriteLine("Inside Miscellaneous.Material method");
+=======
+>>>>>>> origin/bendik
             return _material;
         }
 
@@ -80,7 +90,10 @@ namespace Loppemarked.Market.ProductFactory
 
         public bool Is_sold()
         {
+<<<<<<< HEAD
           //  Console.WriteLine("Inside Miscellaneous.is_sold method");
+=======
+>>>>>>> origin/bendik
             return true;
         }
     }
