@@ -19,19 +19,23 @@ namespace Loppemarked
         public void StartMarked()
         {
             printer.PrintWelcomeText();
-
             cat = new ProductCategory();
             market = new MarketPlaceFacade(cat);
 
+            if(market != null){
+                //TODO ta vekk kommentering når liste-printingen er fullført.
+                //printer.PrintWelcomeText();
+            } else{
+                printer.FailedToOpenMarket();
+            }
+
+           
+            if(market.marketPlaceIsOpen == false){
+                printer.PrintMarketClose();
+            }
             // _threadHandler.startThreads();
             Console.ReadLine();
         }
 
-        public void CloseMarket(){
-            // TODO 
-            // Close the market if all items has been listed and sold. 
-            // Go through the seller and customer list for to check if the market is empty. 
-
-        }
     }
 }
