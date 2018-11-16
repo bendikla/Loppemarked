@@ -1,5 +1,6 @@
 using System;
 using Loppemarked.Market.Controller;
+using Loppemarked.Market.Sale;
 
 namespace Loppemarked.Market.ProductFactory
 {
@@ -81,13 +82,10 @@ namespace Loppemarked.Market.ProductFactory
             return true;
         }
 
-        public string GetSeller()
+        public string GetSeller(Seller seller)
         {
-            var random = new Random();
+            return seller.GetName();
 
-            var nameTypeValues = Enum.GetValues(typeof(Names));
-            var names = (Names)nameTypeValues.GetValue(random.Next(45));
-            return names.ToString();
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using Loppemarked.Market.Sale;
+
 namespace Loppemarked.Market.ProductFactory
 {
     public interface IProduct

@@ -1,5 +1,6 @@
 ﻿using System;
 using Loppemarked.Market.Controller;
+using Loppemarked.Market.Sale;
 
 namespace Loppemarked.Market.ProductFactory
 {
@@ -78,6 +79,12 @@ namespace Loppemarked.Market.ProductFactory
         public bool Is_sold()
         {
             return true;
+        }
+
+        public string GetSeller(Seller seller)
+        {
+            return seller.GetName();
+
         }
     }
 }
