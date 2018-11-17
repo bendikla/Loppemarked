@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting;
-using System.Text;
-using System.Threading;
 using Loppemarked.Market;
 using Loppemarked.Market.ProductFactory;
-using Loppemarked.Market.Sale;
 
 namespace Loppemarked
 {
@@ -15,20 +10,18 @@ namespace Loppemarked
 
         private string _name { get; set; }
         private int _nrOfItems { get; set; }
-        public List<IProduct> itemsPurchesed { get; set; }
-
-        private Seller seller = MarketPlaceFacade.Sellers[0];
+        public List<IProduct> ItemsPurchased { get; set; }
 
         public Customer(string name)
         {
             _name = name;
-            itemsPurchesed = new List<IProduct>();
+            ItemsPurchased = new List<IProduct>();
             Console.WriteLine("Customer: " + _name);
         }
         
         public void PurchaseItem()
         {
-            Market.MarketPlaceFacade.Instance.Transaction(this);
+            MarketPlaceFacade.Instance.Transaction(this);
         }
 
         public string GetName()
@@ -38,18 +31,13 @@ namespace Loppemarked
 
         public void AddItems(IProduct product)
         {
-            itemsPurchesed.Add(product);
+            ItemsPurchased.Add(product);
             _nrOfItems++;
         }
 
         public int GetProductsBought()
         {
             return _nrOfItems;
-        }
-
-        public string GetItems()
-        {
-            return "Name: " + itemsPurchesed[0].GetName() + ", Condition: " + itemsPurchesed[0].GetCondition() + ", Materials: " + itemsPurchesed[0].GetMaterial() +  ", From " + seller.GetName() +".";
         }
 
     }

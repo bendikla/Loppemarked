@@ -1,9 +1,3 @@
-using System;
-using System.Security.Cryptography.X509Certificates;
-using Loppemarked.Market.Controller;
-using Loppemarked.Market.Sale;
-
-
 namespace Loppemarked.Market.ProductFactory
 {
     public class Garden : IProduct
@@ -11,9 +5,8 @@ namespace Loppemarked.Market.ProductFactory
         private string _name;
         private string _condition;
         private string _material;
-        private string _seller;
 
-        // TODO create a selection of random items in garden category
+        // TODO create a selection of random items in garden category Dønn.
         public Garden(){
             RandomGardenProduct();
         }
@@ -78,5 +71,11 @@ namespace Loppemarked.Market.ProductFactory
         public bool Is_sold(){
             return true;
         }
+
+        public string DisplayProduct()
+        {
+            return _name + ", Condition: " + _condition + ", Materials: " + _material + " ";
+        }
     }
+        
 }

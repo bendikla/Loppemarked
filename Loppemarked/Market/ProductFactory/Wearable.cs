@@ -1,8 +1,4 @@
-﻿using System;
-using Loppemarked.Market.Controller;
-using Loppemarked.Market.Sale;
-
-namespace Loppemarked.Market.ProductFactory
+﻿namespace Loppemarked.Market.ProductFactory
 {
     public class Wearable : IProduct
     {
@@ -81,10 +77,9 @@ namespace Loppemarked.Market.ProductFactory
             return true;
         }
 
-        public string GetSeller(Seller seller)
+        public string DisplayProduct()
         {
-            return seller.GetName();
-
+            return _name + ", Condition: " + _condition + ", Materials: " + _material + " ";
         }
     }
 }

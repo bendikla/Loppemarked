@@ -9,5 +9,6 @@ namespace Loppemarked.Market.ProductFactory
         string GetName();
         string GetMaterial();
         string GetCondition();
+        string DisplayProduct();
     }
 }
