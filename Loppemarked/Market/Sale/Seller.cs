@@ -24,7 +24,7 @@ namespace Loppemarked.Market.Sale
             _name = name;
             _nrItems = total;
             _items = new List<IProduct>();
-            Console.WriteLine(_name + " have come to the flea market to trade!");
+            Console.WriteLine("{0} has come to the flea market to trade!", _name);
             this.product = product;
             _count = 0;
         }
@@ -37,15 +37,15 @@ namespace Loppemarked.Market.Sale
         public  void AddProduct()
         {
             _isSold = true;
-            Console.WriteLine(_name + " have come to sell some items!\n");
+            Console.WriteLine("{0} has come to sell some items!\n", _name);
             for (var i = 0; i < _nrItems; i++)
             {   
                     _items.Add(product);
-                    Console.WriteLine(_name + " have " + _items[0].GetName() + " for sale!");
+                Console.WriteLine("{0} has {1} for sale!", _name, _items[0].GetName());
                     Thread.Sleep(500);
             }
             
-            Console.WriteLine(_name + " has sold out!");
+            Console.WriteLine("{0} has sold out!", _name);
             _isSold = false;
         }
 

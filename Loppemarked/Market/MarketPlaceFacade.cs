@@ -18,6 +18,7 @@ namespace Loppemarked.Market
         private static readonly Object _padLock = new Object();
         private static MarketPlaceFacade _instance { get; set; }
         private bool _marketPlaceIsOpen { get; set; }
+        private PrintHandler printer;
         public List<Customer> Customers { get; set; }
         public static List<Seller> Sellers { get; set; }
         public List<Thread> CustomerThreads { get; set; }
@@ -32,6 +33,7 @@ namespace Loppemarked.Market
         private MarketPlaceFacade()
         {
             Customers = new List<Customer>();
+            printer = new PrintHandler();
             Sellers = new List<Seller>();
             CustomerThreads = new List<Thread>();
             SellerThreads = new List<Thread>();
@@ -109,8 +111,7 @@ namespace Loppemarked.Market
 
         public void Open()
         {
-            Console.WriteLine("__________________________________");
-            Console.WriteLine("\nToday's Flea Market sellers: \n");
+            printer.PrintSellerNamesHeader();
             _marketPlaceIsOpen = true;
             
 
@@ -165,7 +166,7 @@ namespace Loppemarked.Market
 
                 if (close)
                 {
-                    Console.WriteLine("Loppa's Flea Market is closed for today!");
+                    printer.ClosingMessage();
                     close = false;
                     break;
                 }
@@ -177,19 +178,21 @@ namespace Loppemarked.Market
         public void Statistic()
         {
             Console.WriteLine("\n________________________________________________________________");
-            Console.WriteLine("\nTransactions receipt:");
-            Console.WriteLine("-----------------------");
+            Console.WriteLine("\nTransactions receipts:");
+            printer.PrintSpacing();
             Console.WriteLine("Sellers:");
+
             foreach (var seller in Sellers)
             {
                 Console.WriteLine(seller.GetName());
             }
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("Customers:");
+            printer.PrintSpacing();
+            Console.WriteLine("\nCustomers:");
+
             foreach (var customer in Customers)
             {
                 int count = 0;
-                Console.WriteLine("\n" + customer.GetName() + ": Bought {0} items.", customer.GetProductsBought());
+                Console.WriteLine("{0}: Bought {1} items.", customer.GetName(), customer.GetProductsBought());
 
             for (var i = 0; i < customer.GetProductsBought(); i++)
             {               
