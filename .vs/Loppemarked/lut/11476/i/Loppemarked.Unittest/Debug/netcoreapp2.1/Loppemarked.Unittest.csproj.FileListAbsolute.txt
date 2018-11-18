@@ -1,0 +1,4 @@
+C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.csproj.CoreCompileInputs.cache
+C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.AssemblyInfoInputs.cache
+C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.AssemblyInfo.cs
+C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.dll
