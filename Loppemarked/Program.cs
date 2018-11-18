@@ -1,3 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading;
+using Loppemarked.Market.Controller;
+
 namespace Loppemarked
 {
     // Main method to run the system
@@ -5,17 +13,9 @@ namespace Loppemarked
     class Program
     {
     static void Main(string[] args)
-<<<<<<< HEAD
         {
             Client.StartMarked(); // Press "Enter" to initiate. 
             Client.Exit(); // Press "Space" to exit. 
         }
-=======
-        {         
-            Client.StartMarked();
-
-            Client.Exit();
-        }        
->>>>>>> 17bd88e4567fa3956f996a5a1de1594e3351d027
     }
 }
