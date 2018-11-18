@@ -1,5 +1,4 @@
-﻿using System;
-namespace Loppemarked.Market.ProductFactory
+﻿namespace Loppemarked.Market.ProductFactory
 {
     public enum ProductCategory
     {

@@ -1,34 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting;
-using System.Text;
-using System.Threading;
-using Loppemarked.Market;
 using Loppemarked.Market.ProductFactory;
-using Loppemarked.Market.Sale;
 
-namespace Loppemarked
+namespace Loppemarked.Market.Customer
 {
-    public class Customer 
+    public class Customer : ICustomer
     {
 
         private string _name { get; set; }
         private int _nrOfItems { get; set; }
-        public List<IProduct> itemsPurchesed { get; set; }
-
-        private Seller seller = MarketPlaceFacade.Sellers[0];
+        private string _itemName { get; set; }
+        private string _sellerName { get; set; }
+        public List<IProduct> ItemsPurchased { get; set; }
 
         public Customer(string name)
         {
             _name = name;
-            itemsPurchesed = new List<IProduct>();
+            ItemsPurchased = new List<IProduct>();
             Console.WriteLine("Customer: " + _name);
         }
         
         public void PurchaseItem()
         {
-            Market.MarketPlaceFacade.Instance.Transaction(this);
+            List<ICustomer> cuz = new List<ICustomer>(MarketPlaceFacade.Customers);
+
+            int random = Client.rnd.Next(cuz.Count);
+            
+            MarketPlaceFacade.Instance.Transaction(this);
         }
 
         public string GetName()
@@ -36,10 +34,23 @@ namespace Loppemarked
             return _name;
         }
 
+  
+
+        public List<IProduct> GetItems()
+        {
+            return ItemsPurchased;
+        }
+
+        public string GetItemName()
+        {
+            return _itemName;
+        }
+
         public void AddItems(IProduct product)
         {
-            itemsPurchesed.Add(product);
-            _nrOfItems++;
+            ItemsPurchased.Add(product);
+            _itemName = product.GetName();
+            _sellerName = product.GetSellerName();
         }
 
         public int GetProductsBought()
@@ -47,10 +58,9 @@ namespace Loppemarked
             return _nrOfItems;
         }
 
-        public string GetItems()
+        public void AddTotalItems()
         {
-            return "Name: " + itemsPurchesed[0].GetName() + ", Condition: " + itemsPurchesed[0].GetCondition() + ", Materials: " + itemsPurchesed[0].GetMaterial() +  ", From " + seller.GetName() +".";
+            _nrOfItems++;
         }
-
     }
 }

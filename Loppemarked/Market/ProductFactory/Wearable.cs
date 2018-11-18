@@ -1,21 +1,21 @@
-﻿using System;
-using Loppemarked.Market.Controller;
-using Loppemarked.Market.Sale;
-
-namespace Loppemarked.Market.ProductFactory
+﻿namespace Loppemarked.Market.ProductFactory
 {
     public class Wearable : IProduct
     {
         private string _name;
         private string _condition;
         private string _material;
+        private string _sellername;
+        private int _nr;
 
-        public Wearable(){
-            RandomWearableProduct();
+        public Wearable(string sellername){
+            RandomWearableProduct(sellername);
         }
-        public void RandomWearableProduct()
+        public void RandomWearableProduct(string sellername)
         {
             var randomProduct = Client.rnd.Next(4);
+            SetSellerName(sellername);
+            SetNr(_nr);
             switch (randomProduct)
             {
                 case 0:
@@ -46,6 +46,16 @@ namespace Loppemarked.Market.ProductFactory
             }
         }
 
+        public void SetNr(int nr)
+        {
+            _nr = nr;
+        }
+
+        public int GetNr()
+        {
+            return _nr;
+        }
+
         public string GetCondition()
         {
             return _condition;
@@ -66,6 +76,16 @@ namespace Loppemarked.Market.ProductFactory
             _name = name;
         }
 
+        public void SetSellerName(string name)
+        {
+            _sellername = name;
+        }
+
+        public string GetSellerName()
+        {
+            return _sellername;
+        }
+
         public string GetMaterial()
         {
             return _material;
@@ -81,10 +101,9 @@ namespace Loppemarked.Market.ProductFactory
             return true;
         }
 
-        public string GetSeller(Seller seller)
+        public string DisplayProduct()
         {
-            return seller.GetName();
-
+            return _name + ", Condition: " + _condition + ", Materials: " + _material + " ";
         }
     }
 }
