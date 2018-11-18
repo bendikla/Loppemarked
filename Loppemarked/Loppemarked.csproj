@@ -45,7 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="Market\Controller\AttendantFactory.cs" />
+    <Compile Include="Market\Controller\IAttendantFactory.cs" />
     <Compile Include="Market\Controller\Names.cs" />
+    <Compile Include="Market\Customer\ICustomer.cs" />
+    <Compile Include="Market\Sale\ISellers.cs" />
     <Compile Include="Market\Sale\Seller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

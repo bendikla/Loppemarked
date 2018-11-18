@@ -5,14 +5,18 @@
         private string _name;
         private string _condition;
         private string _material;
+        private string _sellername;
+        private int _nr;
 
-        public Miscellaneous(){
-            RandomMiscellaneousProduct();
+        public Miscellaneous(string sellername){
+            RandomMiscellaneousProduct(sellername);
         }
 
-        public void RandomMiscellaneousProduct()
+        public void RandomMiscellaneousProduct(string sellername)
         {
             var randomProduct = Client.rnd.Next(4);
+            SetSellerName(sellername);
+            SetNr(_nr);
             switch (randomProduct)
             {
                 case 0:
@@ -43,6 +47,16 @@
             }
         }
 
+        public void SetNr(int nr)
+        {
+            _nr = nr;
+        }
+
+        public int GetNr()
+        {
+            return _nr;
+        }
+
         public string GetCondition()
         {
             return _condition;
@@ -63,6 +77,16 @@
             _name = name;
         }
 
+        public void SetSellerName(string name)
+        {
+            _sellername = name;
+        }
+
+        public string GetSellerName()
+        {
+            return _sellername;
+        }
+
         public string GetMaterial()
         {
             return _material;
@@ -80,7 +104,7 @@
 
         public string DisplayProduct()
         {
-            return  _name + ", Condition: " + _condition + ", Materials: " + _material + " ";
+            return _name + ", Condition: " + _condition + ", Materials: " + _material + " ";
         }
     }
 }

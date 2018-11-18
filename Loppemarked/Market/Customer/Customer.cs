@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using Loppemarked.Market;
 using Loppemarked.Market.ProductFactory;
 
-namespace Loppemarked
+namespace Loppemarked.Market.Customer
 {
-    public class Customer 
+    public class Customer : ICustomer
     {
 
         private string _name { get; set; }
         private int _nrOfItems { get; set; }
+        private string _itemName { get; set; }
+        private string _sellerName { get; set; }
         public List<IProduct> ItemsPurchased { get; set; }
 
         public Customer(string name)
@@ -21,6 +22,10 @@ namespace Loppemarked
         
         public void PurchaseItem()
         {
+            List<ICustomer> cuz = new List<ICustomer>(MarketPlaceFacade.Customers);
+
+            int random = Client.rnd.Next(cuz.Count);
+            
             MarketPlaceFacade.Instance.Transaction(this);
         }
 
@@ -29,10 +34,23 @@ namespace Loppemarked
             return _name;
         }
 
+  
+
+        public List<IProduct> GetItems()
+        {
+            return ItemsPurchased;
+        }
+
+        public string GetItemName()
+        {
+            return _itemName;
+        }
+
         public void AddItems(IProduct product)
         {
             ItemsPurchased.Add(product);
-            _nrOfItems++;
+            _itemName = product.GetName();
+            _sellerName = product.GetSellerName();
         }
 
         public int GetProductsBought()
@@ -40,5 +58,9 @@ namespace Loppemarked
             return _nrOfItems;
         }
 
+        public void AddTotalItems()
+        {
+            _nrOfItems++;
+        }
     }
 }
