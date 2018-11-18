@@ -6,7 +6,8 @@ namespace Loppemarked
 {
      public static class Client
     {
-        public static readonly Random rnd = new Random(); // Global random
+        public static readonly Random rnd = new Random();
+
 
         public static void StartMarked()
         {
@@ -18,7 +19,6 @@ namespace Loppemarked
             //while(Console.ReadKey().Key != ConsoleKey.Enter) { }
             MarketPlaceFacade.Instance.Open();
         }
-
         public static void Exit()
         {
             Console.WriteLine("Press space to exit flea market");

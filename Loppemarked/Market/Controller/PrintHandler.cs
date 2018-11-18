@@ -20,8 +20,8 @@ namespace Loppemarked.Market.Controller
         }
 
         public void PrintProduct(IProduct product){
-            Console.WriteLine("Description: {0} | Condition: {1} | Material: {2} | Avaliable: {3}",
-                              product.GetName(), product.GetCondition(), product.GetMaterial(), product.Is_sold());
+            Console.WriteLine("Testes da Description: " + product.GetName() + " | Condition:" + " " + product.GetCondition()
+                                          + " | Material:" + " " + product.GetMaterial() + " | Avaliable:" + " " + product.Is_sold() + ".");
         }
 
         //TODO write method for seller print

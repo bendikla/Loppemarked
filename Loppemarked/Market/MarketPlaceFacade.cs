@@ -138,7 +138,7 @@ namespace Loppemarked.Market
             {
                 if (Sellers.Count == 0)
                 {
-                    Console.WriteLine("There are no sellers today.");
+                    Console.WriteLine("There arent any sellers today??");
                     close = true;
                 }
 
@@ -187,6 +187,7 @@ namespace Loppemarked.Market
                 
                 Console.WriteLine(seller.GetName() + ", Item: " +seller.ItemName);
             }
+<<<<<<< HEAD
             printer.PrintSpacing();
             Console.WriteLine("\nCustomers:");
 
@@ -202,6 +203,7 @@ namespace Loppemarked.Market
             }
             count++;    
             }
+=======
 
             Console.WriteLine("-----------------------");
             Console.WriteLine("Customers:");
@@ -213,10 +215,11 @@ namespace Loppemarked.Market
                 for (var i = 0; i < customer.GetProductsBought(); i++)
                 {
                     Seller seller = Sellers[i];
-                    Console.WriteLine("Name: " + customer.itemsPurchased[i].DisplayProduct() + ", from: " + seller.GetName());
+                    Console.WriteLine("Name: " + customer.ItemsPurchased[i].DisplayProduct() + ", from: " + seller.GetName());
                 }
                 count++;                
             }            
+>>>>>>> 17bd88e4567fa3956f996a5a1de1594e3351d027
             Console.WriteLine("\n__________________________________________________________________");
         }
     }
