@@ -21,11 +21,7 @@ namespace Loppemarked.Market.Customer
         }
         
         public void PurchaseItem()
-        {
-            List<ICustomer> cuz = new List<ICustomer>(MarketPlaceFacade.Customers);
-
-            int random = Client.rnd.Next(cuz.Count);
-            
+        {            
             MarketPlaceFacade.Instance.Transaction(this);
         }
 

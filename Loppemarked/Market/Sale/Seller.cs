@@ -12,7 +12,6 @@ namespace Loppemarked.Market.Sale
         private  string _name { get; set; }
         public string ItemName { get; set; }
         public List<IProduct> _items { get; set; }
-        private List<IProduct> _itemcopy { get; set; }
         public static int _itemCount { get; set; }
         private int _itemNr { get; set; }
         private IProduct product;
@@ -26,7 +25,6 @@ namespace Loppemarked.Market.Sale
             _itemCount = 0;
             _itemNr = 0;
             _items = new List<IProduct>();
-            _itemcopy = new List<IProduct>();
             Console.WriteLine("{0} has come with {1} items {2} to the flea market to trade!", _name, total, product.GetName());
             this.product = product;
             _isSold = false;
@@ -50,7 +48,6 @@ namespace Loppemarked.Market.Sale
                     ItemName = _items[0].GetName();
                     Console.WriteLine("{0} has listed a #{1} {2}\n", _name, _itemNr, _items[0].DisplayProduct());
                     Thread.Sleep(500);
-                    product.SetNr(_itemNr);
             }
             _itemNr = 0;
             Console.WriteLine("{0} has sold out!", _name);

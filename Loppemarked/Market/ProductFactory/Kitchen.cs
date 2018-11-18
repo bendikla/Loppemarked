@@ -6,7 +6,6 @@ namespace Loppemarked.Market.ProductFactory
         private string _condition;
         private string _material;
         private string _sellername;
-        private int _nr;
 
         public Kitchen(string sellername){
             RandomKitchenProduct(sellername);
@@ -16,7 +15,6 @@ namespace Loppemarked.Market.ProductFactory
         {
             var randomProduct = Client.rnd.Next(4);
             SetSellerName(sellername);
-            SetNr(_nr);
             switch (randomProduct)
             {
                 case 0:
@@ -46,17 +44,6 @@ namespace Loppemarked.Market.ProductFactory
                     break;
             }
         }
-
-        public void SetNr(int nr)
-        {
-            _nr = nr;
-        }
-
-        public int GetNr()
-        {
-            return _nr;
-        }
-
         public string GetCondition()
         {
             return _condition;

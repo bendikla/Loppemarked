@@ -4,8 +4,6 @@ namespace Loppemarked.Market.ProductFactory
 {
     public class ProductFactory
     {
-        readonly PrintHandler printer = new PrintHandler();
-
         private static IProduct product { get; set; }        
 
         public static IProduct CreateProduct(int numberOfProducts, string sellername)
@@ -50,8 +48,6 @@ namespace Loppemarked.Market.ProductFactory
         public string Materials { get; set; }
         public string Seller { get; set; }
         public bool Available { get; set; }
-        public int Nr { get; set; }
-
         public ProductSkeleton(IProduct product)
         {
             Item = product.GetName();
@@ -59,16 +55,6 @@ namespace Loppemarked.Market.ProductFactory
             Materials = product.GetMaterial();
             Seller = product.GetSellerName();
             Available = product.Is_sold();
-        }
-
-        public void SetNr(int nr)
-        {
-            Nr = nr;
-        }
-
-        public int GetNr()
-        {
-            return Nr;
         }
 
         public bool Is_sold()

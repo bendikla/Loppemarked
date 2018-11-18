@@ -34,10 +34,6 @@ namespace Loppemarked.Market.Controller
             PrintSpacing();
             Console.WriteLine("\nToday's Flea Market sellers: \n");
         }
-        public void FailedToOpenMarket(){
-            Console.WriteLine("Failed to open market.");
-            PrintSpacing();
-        }
 
         public void PrintStatistics(){
             Console.WriteLine("\n________________________________________________________________");

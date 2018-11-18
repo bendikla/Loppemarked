@@ -29,7 +29,6 @@ namespace Loppemarked.Market
             Sellers = new List<ISellers>();
             CustomerThreads = new List<Thread>();
             SellerThreads = new List<Thread>();
-            //_nrOfPeople = 0;
         }
 
         public static MarketPlaceFacade Instance
