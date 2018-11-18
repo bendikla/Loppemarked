@@ -17,15 +17,11 @@ namespace Loppemarked.Market.Customer
         {
             _name = name;
             ItemsPurchased = new List<IProduct>();
-            Console.WriteLine("Customer: " + _name);
+            Console.WriteLine("Customer: {0}", _name);
         }
         
         public void PurchaseItem()
-        {
-            List<ICustomer> cuz = new List<ICustomer>(MarketPlaceFacade.Customers);
-
-            int random = Client.rnd.Next(cuz.Count);
-            
+        {            
             MarketPlaceFacade.Instance.Transaction(this);
         }
 

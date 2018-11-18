@@ -8,7 +8,6 @@ namespace Loppemarked
     {
         public static readonly Random rnd = new Random();
 
-
         public static void StartMarked()
         {
             PrintHandler printer = new PrintHandler();
