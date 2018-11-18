@@ -69,6 +69,9 @@ namespace Loppemarked.Market
             }
             
             AddCustomer(_raNames.ToString());
+            AddCustomer(_raNames.ToString());
+            AddCustomer(_raNames.ToString());
+            AddCustomer(_raNames.ToString());
         }
 
 

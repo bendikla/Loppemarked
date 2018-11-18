@@ -61,9 +61,6 @@
     <Compile Include="Market\Controller\PrintHandler.cs" />
     <Compile Include="Market\Customer\Customer.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Test.cs" />
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

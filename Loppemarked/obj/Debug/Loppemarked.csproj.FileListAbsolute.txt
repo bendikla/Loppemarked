@@ -19,3 +19,9 @@ C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.exe
 C:\Loppemarked\Loppemarked\obj\Debug\Loppemarked.pdb
 C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.exe
 C:\Loppemarked\Loppemarked\bin\Debug\Loppemarked.pdb
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\bin\Debug\Loppemarked.exe
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\bin\Debug\Loppemarked.pdb
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csprojAssemblyReference.cache
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.csproj.CoreCompileInputs.cache
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.exe
+C:\Users\pal11\Documents\GitHub\Loppemarked\Loppemarked\obj\Debug\Loppemarked.pdb
