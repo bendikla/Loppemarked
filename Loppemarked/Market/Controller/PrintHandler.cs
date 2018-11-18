@@ -1,6 +1,7 @@
 ﻿using System;
 using Loppemarked.Market.ProductFactory;
 using Loppemarked.Market.Sale;
+using Loppemarked.Market.Controller;
 using Loppemarked;
 
 namespace Loppemarked.Market.Controller
@@ -13,36 +14,36 @@ namespace Loppemarked.Market.Controller
         }
 
         public void PrintWelcomeText(){
-            Console.WriteLine("----------------------------------");
+            PrintSpacing();
             Console.WriteLine("Welcome to Lotta's Flea market");
+            PrintSpacing();
+        }
+       
+        public void PrintSpacing(){
             Console.WriteLine("----------------------------------\n");
-           // Console.WriteLine("List of items for sale:");
         }
 
-        public void PrintProduct(IProduct product){
-            Console.WriteLine("Testes da Description: " + product.GetName() + " | Condition:" + " " + product.GetCondition()
-                                          + " | Material:" + " " + product.GetMaterial() + " | Avaliable:" + " " + product.Is_sold() + ".");
-        }
-
-        //TODO write method for seller print
-        public void PrintSellerList(){
-
-        }
-
-        // TODO write method for purchase print
-        public void PrintCustomerList(){
-
-        }
-
-        public void PrintMarketClose(){
-            Console.WriteLine("----------------------------------");
+        public void CloseMarket(){
+            PrintSpacing();
             Console.WriteLine("All inventory has been sold.");
-            Console.WriteLine("----------------------------------");
+            PrintSpacing();
+            Console.WriteLine("Lotta's Flea Market is closed for today!");
         }
 
+        public void PrintOpenMarket(){
+            PrintSpacing();
+            Console.WriteLine("\nToday's Flea Market sellers: \n");
+        }
         public void FailedToOpenMarket(){
             Console.WriteLine("Failed to open market.");
-            Console.WriteLine("----------------------------------");
+            PrintSpacing();
+        }
+
+        public void PrintStatistics(){
+            Console.WriteLine("\n________________________________________________________________");
+            Console.WriteLine("\nTransactions Receipt:");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Sellers:");
         }
     }
 }

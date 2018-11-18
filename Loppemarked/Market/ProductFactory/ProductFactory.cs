@@ -98,7 +98,7 @@ namespace Loppemarked.Market.ProductFactory
 
         public string DisplayProduct()
         {
-            return Item + ", Condition: " + Condition + ", Materials: " + Materials + ", From: " + Seller;
+            return Item + " for sale!\nCondition: " + Condition + "\nMaterials: " + Materials;
         }
     }
 }

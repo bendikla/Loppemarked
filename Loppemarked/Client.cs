@@ -8,7 +8,6 @@ namespace Loppemarked
     {
         public static readonly Random rnd = new Random();
 
-
         public static void StartMarked()
         {
             PrintHandler printer = new PrintHandler();
@@ -16,7 +15,7 @@ namespace Loppemarked
             MarketPlaceFacade.Instance.Create();
             Console.WriteLine("\nPress enter to start");
 
-            while(Console.ReadKey().Key != ConsoleKey.Enter) { }
+            //while(Console.ReadKey().Key != ConsoleKey.Enter) { }
             MarketPlaceFacade.Instance.Open();
         }
         public static void Exit()

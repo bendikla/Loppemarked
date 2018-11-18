@@ -27,7 +27,7 @@ namespace Loppemarked.Market.Sale
             _itemNr = 0;
             _items = new List<IProduct>();
             _itemcopy = new List<IProduct>();
-            Console.WriteLine(_name + " have come " + "with: " +"#" + total + " " + product.GetName() +" to the flea market to trade!");
+            Console.WriteLine("{0} has come with {1} items {2} to the flea market to trade!", _name, total, product.GetName());
             this.product = product;
             _isSold = false;
         }
@@ -40,7 +40,7 @@ namespace Loppemarked.Market.Sale
         public  void AddProduct()
         {
             _isSold = true;
-            Console.WriteLine(_name + " have come to sell some items!");
+            Console.WriteLine("{0} has come to sell some items!", _name);
             
             for (var i = 0; i < _nrItems; i++)
             {
@@ -48,24 +48,23 @@ namespace Loppemarked.Market.Sale
                     _itemNr++;
                     _items.Add(new ProductSkeleton(product));
                     ItemName = _items[0].GetName();
-                    Console.WriteLine(_name + " have a #" + _itemNr + " " + _items[0].DisplayProduct() + " for sale!\n");
+                    Console.WriteLine("{0} has listed a #{1} {2}\n", _name, _itemNr, _items[0].DisplayProduct());
                     Thread.Sleep(500);
                     product.SetNr(_itemNr);
             }
             _itemNr = 0;
-            Console.WriteLine(_name + " has sold out!");
+            Console.WriteLine("{0} has sold out!", _name);
             _isSold = false;
 
         }
 
         public void Sell(Customer.Customer customer)
         {
-
-                customer.AddItems(product);
-                string transaction = customer.GetName() + " bought item#" + _itemNr+ " " + customer.GetItemName() + " from " + _name;
-                Console.WriteLine(transaction.PadLeft(Console.WindowWidth));
-                customer.AddTotalItems();
-                _items.RemoveAt(0);
+            customer.AddItems(product);
+            string transaction = customer.GetName() + " bought item #" + _itemNr+ " " + customer.GetItemName() + "\nFrom: " + _name + "\n";
+            Console.WriteLine(transaction.PadLeft(Console.WindowWidth));
+            customer.AddTotalItems();
+            _items.RemoveAt(0);
         }        
 
         public bool ProductAvailable()
