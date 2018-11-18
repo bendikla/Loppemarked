@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Loppeoppemarked.Loppemarked;
 using Loppemarked.Market.ProductFactory;
+using Loppemarked.Market.Customer;
 
 
 namespace Loppeoppemarked.Loppemarked.Unittest
@@ -37,29 +38,11 @@ namespace Loppeoppemarked.Loppemarked.Unittest
         
         }
         [Test]
-        public void ProductFactory_CreateProduct_CheckForRightType()
+        public void Customer_CreateCustomer_CheckName()
         {
             
 
-            IProduct obj = ProductFactory.CreateProduct(1);
-
-            IProduct garden = new Garden();
-            IProduct kitchen = new Kitchen();
-            IProduct Wearable = new Wearable();
-            IProduct Miscellaneous = new Miscellaneous();
-            IProduct LivingRoom = new LivingRoom();
-
             
-
-            Assert.Multiple(() =>
-            {
-
-                Assert.That(obj, Is.TypeOf<Garden>());
-                Assert.That(obj, Is.TypeOf<Kitchen>());
-                Assert.That(obj, Is.TypeOf<Wearable>());
-                Assert.That(obj, Is.TypeOf<Miscellaneous>());
-                Assert.That(obj, Is.TypeOf<LivingRoom>());
-            });
 
         }
     }

@@ -1,14 +1,3 @@
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\Mono.Cecil.dll
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.deps.json
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.runtimeconfig.json
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.runtimeconfig.dev.json
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\b\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.dll
 C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.csproj.CoreCompileInputs.cache
 C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.AssemblyInfoInputs.cache
 C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.AssemblyInfo.cs
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.csproj.CopyComplete
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.dll
-C:\Users\pal11\Documents\GitHub\Loppemarked\.vs\Loppemarked\lut\0\i\Loppemarked.Unittest\Debug\netcoreapp2.1\Loppemarked.Unittest.csprojAssemblyReference.cache
