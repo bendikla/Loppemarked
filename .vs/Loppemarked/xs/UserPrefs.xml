@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{BC7B12E5-B19C-49A6-86C4-D4BB14125D37}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Loppemarked/Market/Customer/Customer.cs">
     <Files>
-      <File FileName="Loppemarked/Market/Controller/PrintHandler.cs" Line="37" Column="40" />
-      <File FileName="Loppemarked/Market/ProductFactory/ProductFactory.cs" Line="19" Column="57" />
-      <File FileName="Loppemarked/Market/MarketPlaceFacade.cs" Line="198" Column="14" />
-      <File FileName="Loppemarked/Program.cs" Line="12" Column="32" />
-      <File FileName="Loppemarked/Client.cs" Line="26" Column="15" />
-      <File FileName="Loppemarked/Market/Sale/Seller.cs" Line="1" Column="1" />
-      <File FileName="Loppemarked/Market/Controller/Names.cs" Line="10" Column="17" />
-      <File FileName="Loppemarked/Market/ProductFactory/Garden.cs" Line="14" Column="9" />
-      <File FileName="Loppemarked/Market/ProductFactory/Kitchen.cs" Line="27" Column="24" />
+      <File FileName="Loppemarked/Market/Controller/PrintHandler.cs" Line="1" Column="1" />
+      <File FileName="Loppemarked/Market/ProductFactory/ProductFactory.cs" Line="1" Column="1" />
+      <File FileName="Loppemarked/Market/Controller/Names.cs" Line="1" Column="1" />
+      <File FileName="Loppemarked/Market/ProductFactory/Kitchen.cs" Line="1" Column="1" />
       <File FileName="Loppemarked/Market/ProductFactory/IProduct.cs" Line="1" Column="1" />
-      <File FileName="Loppemarked/Market/Customer/Customer.cs" Line="25" Column="22" />
+      <File FileName="Loppemarked/Client.cs" Line="10" Column="1" />
+      <File FileName="Loppemarked/Market/ProductFactory/Garden.cs" Line="8" Column="9" />
+      <File FileName="Loppemarked/Market/Sale/Seller.cs" Line="47" Column="1" />
+      <File FileName="Loppemarked/Program.cs" Line="12" Column="10" />
+      <File FileName="Loppemarked/Market/MarketPlaceFacade.cs" Line="216" Column="73" />
+      <File FileName="Loppemarked/Market/Customer/Customer.cs" Line="22" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />

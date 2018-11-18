@@ -30,26 +30,19 @@ namespace Loppemarked.Market.Sale
             return _name;
         }
 
-        public  void AddProduct()
+        public void AddProduct()
         {
             _isSold = true;
-<<<<<<< HEAD
             Console.WriteLine("{0} has come to sell some items!\n", _name);
-=======
-            Console.WriteLine(_name + " have come to sell some items!");
->>>>>>> 17bd88e4567fa3956f996a5a1de1594e3351d027
             for (var i = 0; i < _nrItems; i++)
             {
 
                     _items.Add(product);
-<<<<<<< HEAD
                 Console.WriteLine("{0} has {1} for sale!", _name, _items[0].GetName());
                     Thread.Sleep(500);
-=======
                     ItemName = _items[i].GetName();
-                    Console.WriteLine(_name + " have a " + _items[i].DisplayProduct() + " for sale!\n");
+                Console.WriteLine("{0} have a {1} for sale!\n", _name, _items[i].DisplayProduct());
                     Thread.Sleep(200);
->>>>>>> 17bd88e4567fa3956f996a5a1de1594e3351d027
             }
             
             Console.WriteLine("{0} has sold out!", _name);
@@ -58,13 +51,13 @@ namespace Loppemarked.Market.Sale
 
         public void Sell(Customer customer)
         {          
-                       for(int i = 0; i < _items.Count; i++)
-                       {
-                           string str = customer.GetName() + " bought item# " + _items[i].GetName() + " from " + _name;
-                           customer.AddItems(_items[i]);
-                           Console.WriteLine(str.PadLeft(Console.WindowWidth));
-                           _items.RemoveAt(i);
-                       }
+           for(int i = 0; i < _items.Count; i++)
+           {
+               string str = customer.GetName() + " bought item# " + _items[i].GetName() + " from " + _name;
+               customer.AddItems(_items[i]);
+               Console.WriteLine(str.PadLeft(Console.WindowWidth));
+               _items.RemoveAt(i);
+           }
                         
         }        
 
