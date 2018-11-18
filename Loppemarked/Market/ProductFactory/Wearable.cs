@@ -6,7 +6,6 @@
         private string _condition;
         private string _material;
         private string _sellername;
-        private int _nr;
 
         public Wearable(string sellername){
             RandomWearableProduct(sellername);
@@ -15,7 +14,6 @@
         {
             var randomProduct = Client.rnd.Next(4);
             SetSellerName(sellername);
-            SetNr(_nr);
             switch (randomProduct)
             {
                 case 0:
@@ -44,16 +42,6 @@
                     SetMaterial("0");
                     break;
             }
-        }
-
-        public void SetNr(int nr)
-        {
-            _nr = nr;
-        }
-
-        public int GetNr()
-        {
-            return _nr;
         }
 
         public string GetCondition()
@@ -103,7 +91,7 @@
 
         public string DisplayProduct()
         {
-            return _name + ", Condition: " + _condition + ", Materials: " + _material + " ";
+            return _name + "\nCondition: " + _condition + "\nMaterials: " + _material;
         }
     }
 }
