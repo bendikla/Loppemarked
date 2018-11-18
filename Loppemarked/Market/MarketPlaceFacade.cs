@@ -1,11 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Net.NetworkInformation;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using Loppemarked.Market.ProductFactory;
-using Loppemarked;
 using Loppemarked.Market.Controller;
 using Loppemarked.Market.Sale;
 
@@ -61,7 +57,7 @@ namespace Loppemarked.Market
             Array names = Enum.GetValues(typeof(Names));
 
             int sellers = 4;
-            
+            int customers = 2;
 
             for (var i = 0; i < sellers; i++)
             {
@@ -69,8 +65,12 @@ namespace Loppemarked.Market
                 _raNames = (Names) names.GetValue(Client.rnd.Next(names.Length));
                 AddSeller(_raNames.ToString(), 1, one);
             }
-            
-            AddCustomer(_raNames.ToString());
+            Console.WriteLine("");
+            for(var i = 0; i < customers; i++)
+            {
+                _raNames = (Names)names.GetValue(Client.rnd.Next(names.Length));
+                AddCustomer(_raNames.ToString());
+            }
         }
 
 
@@ -184,8 +184,10 @@ namespace Loppemarked.Market
 
             foreach (var seller in Sellers)
             {
-                Console.WriteLine(seller.GetName());
+                
+                Console.WriteLine(seller.GetName() + ", Item: " +seller.ItemName);
             }
+<<<<<<< HEAD
             printer.PrintSpacing();
             Console.WriteLine("\nCustomers:");
 
@@ -201,6 +203,23 @@ namespace Loppemarked.Market
             }
             count++;    
             }
+=======
+
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Customers:");
+            foreach (var customer in Customers)
+            {
+                int count = 0;
+                Console.WriteLine("\n" + customer.GetName() + ": Bought items: " + customer.GetProductsBought());
+   
+                for (var i = 0; i < customer.GetProductsBought(); i++)
+                {
+                    Seller seller = Sellers[i];
+                    Console.WriteLine("Name: " + customer.ItemsPurchased[i].DisplayProduct() + ", from: " + seller.GetName());
+                }
+                count++;                
+            }            
+>>>>>>> 17bd88e4567fa3956f996a5a1de1594e3351d027
             Console.WriteLine("\n__________________________________________________________________");
         }
     }
