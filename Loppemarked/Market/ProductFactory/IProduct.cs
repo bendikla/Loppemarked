@@ -11,7 +11,5 @@ namespace Loppemarked.Market.ProductFactory
         string GetMaterial();
         string GetCondition();
         string DisplayProduct();
-        int GetNr();
-        void SetNr(int nr);
     }
 }

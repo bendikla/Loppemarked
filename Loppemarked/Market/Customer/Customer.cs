@@ -17,13 +17,17 @@ namespace Loppemarked.Market.Customer
         {
             _name = name;
             ItemsPurchased = new List<IProduct>();
-            Console.WriteLine("Customer: " + _name);
+            Console.WriteLine("Customer: {0}", _name);
         }
         
         public void PurchaseItem()
+<<<<<<< HEAD
         {
             
             
+=======
+        {            
+>>>>>>> origin/Digg
             MarketPlaceFacade.Instance.Transaction(this);
         }
 
