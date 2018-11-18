@@ -50,7 +50,7 @@ namespace Loppemarked.Market.Sale
                     ItemName = _items[0].GetName();
                     Console.WriteLine(_name + " have a #" + _itemNr + " " + _items[0].DisplayProduct() + " for sale!\n");
                     Thread.Sleep(500);
-                    product.SetNr(_itemNr);
+                 //   product.SetNr(_itemNr);
             }
             _itemNr = 0;
             Console.WriteLine(_name + " has sold out!");
