@@ -17,7 +17,7 @@ namespace Loppemarked.Market.Sale
         private IProduct product;
         private int _nrItems { get; set; }
         private bool _isSold { get; set; }
-        // TODO Make so seller receives products dønn
+       
         public Seller(string name, int total, IProduct product)
         {
             _name = name;
