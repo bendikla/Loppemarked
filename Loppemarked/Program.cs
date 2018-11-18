@@ -8,14 +8,20 @@ using Loppemarked.Market.Controller;
 
 namespace Loppemarked
 {
-    // Main method to run the system
+    // Main class to run the program
     // Singleton design pattern
     class Program
     {
     static void Main(string[] args)
         {
-            Client.StartMarked(); // Press "Enter" to initiate. 
-            Client.Exit(); // Press "Space" to exit. 
+           
+            Client.StartMarked();
+
+            Client.Exit();
+
+
         }
+
+        
     }
 }

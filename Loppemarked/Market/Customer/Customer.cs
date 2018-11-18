@@ -23,7 +23,7 @@ namespace Loppemarked
         {
             _name = name;
             itemsPurchased = new List<IProduct>();
-            Console.WriteLine("Customer: {0}", _name);
+            Console.WriteLine("Customer: " + _name);
         }
         
         public void PurchaseItem()

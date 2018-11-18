@@ -13,10 +13,10 @@ namespace Loppemarked.Market.Controller
         }
 
         public void PrintWelcomeText(){
-            PrintSpacing();
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Welcome to Lotta's Flea market");
-            PrintSpacing();
-            // Console.WriteLine("List of items for sale:");
+            Console.WriteLine("----------------------------------\n");
+           // Console.WriteLine("List of items for sale:");
         }
 
         public void PrintProduct(IProduct product){
@@ -35,26 +35,13 @@ namespace Loppemarked.Market.Controller
         }
 
         public void PrintMarketClose(){
-            PrintSpacing();
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("All inventory has been sold.");
-            PrintSpacing();
-        }
-
-        public void ClosingMessage(){
-            Console.WriteLine("Loppa's Flea Market is closing for the day!");
-        }
-
-        public void PrintSellerNamesHeader(){
-            PrintSpacing();
-            Console.WriteLine("\nToday's Flea Market sellers: \n");
+            Console.WriteLine("----------------------------------");
         }
 
         public void FailedToOpenMarket(){
             Console.WriteLine("Failed to open market.");
-            PrintSpacing();
-        }
-
-        public void PrintSpacing(){
             Console.WriteLine("----------------------------------");
         }
     }
