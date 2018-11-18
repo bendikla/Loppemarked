@@ -5773,9 +5773,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pal11\\Documents\\GitHub\\Loppemarked\\UnitTesting\\UnitTesting.csproj",
-      "projectName": "UnitTesting",
-      "projectPath": "C:\\Users\\pal11\\Documents\\GitHub\\Loppemarked\\UnitTesting\\UnitTesting.csproj",
+      "projectUniqueName": "C:\\Users\\pal11\\Documents\\GitHub\\Loppemarked\\UnitTesting\\Testing.csproj",
+      "projectName": "Testing",
+      "projectPath": "C:\\Users\\pal11\\Documents\\GitHub\\Loppemarked\\UnitTesting\\Testing.csproj",
       "packagesPath": "C:\\Users\\pal11\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\pal11\\Documents\\GitHub\\Loppemarked\\UnitTesting\\obj\\",
       "projectStyle": "PackageReference",

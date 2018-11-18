@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loppemarked", "Loppemarked\Loppemarked.csproj", "{BC7B12E5-B19C-49A6-86C4-D4BB14125D37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{62869966-5BCB-4F30-8897-FAE6C74B8BBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "UnitTesting\Testing.csproj", "{62869966-5BCB-4F30-8897-FAE6C74B8BBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

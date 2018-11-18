@@ -21,13 +21,7 @@ namespace Loppemarked.Market.Customer
         }
         
         public void PurchaseItem()
-<<<<<<< HEAD
-        {
-            
-            
-=======
-        {            
->>>>>>> origin/Digg
+        {          
             MarketPlaceFacade.Instance.Transaction(this);
         }
 
@@ -35,8 +29,6 @@ namespace Loppemarked.Market.Customer
         {
             return _name;
         }
-
-  
 
         public List<IProduct> GetItems()
         {
