@@ -21,17 +21,7 @@ namespace Loppemarked.Market.Customer
         }
         
         public void PurchaseItem()
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
- 
-=======
-            
-            
-=======
         {            
->>>>>>> origin/Digg
->>>>>>> UnitTesting
             MarketPlaceFacade.Instance.Transaction(this);
         }
 

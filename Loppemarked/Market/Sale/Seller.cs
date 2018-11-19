@@ -48,10 +48,6 @@ namespace Loppemarked.Market.Sale
                     ItemName = _items[0].GetName();
                     Console.WriteLine("{0} has listed a #{1} {2}\n", _name, _itemNr, _items[0].DisplayProduct());
                     Thread.Sleep(500);
-<<<<<<< HEAD
-                 //   product.SetNr(_itemNr);
-=======
->>>>>>> UnitTesting
             }
             _itemNr = 0;
             Console.WriteLine("{0} has sold out!", _name);
