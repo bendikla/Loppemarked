@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Loppemarked.Market.Customer;
-using Loppemarked.Market.ProductFactory;
+using Fleamarket.Market.Customer;
+using Fleamarket.Market.ProductFactory;
 
-namespace Loppemarked.Market.Sale
+namespace Fleamarket.Market.Sale
 {
     public interface ISellers
     {

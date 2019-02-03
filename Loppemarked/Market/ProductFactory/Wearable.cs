@@ -1,4 +1,4 @@
-﻿namespace Loppemarked.Market.ProductFactory
+﻿namespace Fleamarket.Market.ProductFactory
 {
     public class Wearable : IProduct
     {

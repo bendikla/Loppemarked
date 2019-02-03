@@ -1,4 +1,4 @@
-﻿namespace Loppemarked
+﻿namespace Fleamarket
 {
     // Main class to run the program
     // Singleton design pattern

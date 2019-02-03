@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Loppemarked.Market.ProductFactory;
+using Fleamarket.Market.ProductFactory;
 
-namespace Loppemarked.Market.Customer
+namespace Fleamarket.Market.Customer
 {
     public class Customer : ICustomer
     {

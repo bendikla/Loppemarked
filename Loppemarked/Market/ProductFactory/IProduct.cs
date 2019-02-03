@@ -1,7 +1,7 @@
 ﻿using System;
-using Loppemarked.Market.Sale;
+using Fleamarket.Market.Sale;
 
-namespace Loppemarked.Market.ProductFactory
+namespace Fleamarket.Market.ProductFactory
 {
     public interface IProduct
     {

@@ -1,6 +1,6 @@
-using Loppemarked.Market.Controller;
+using Fleamarket.Market.Controller;
 
-namespace Loppemarked.Market.ProductFactory
+namespace Fleamarket.Market.ProductFactory
 {
     public class ProductFactory
     {

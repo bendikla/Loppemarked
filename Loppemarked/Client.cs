@@ -1,8 +1,8 @@
-﻿using Loppemarked.Market.Controller;
-using System;
-using Loppemarked.Market;
+﻿using System;
+using Fleamarket.Market;
+using Fleamarket.Market.Controller;
 
-namespace Loppemarked
+namespace Fleamarket
 {
      public static class Client
     {

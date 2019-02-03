@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Loppemarked.Market.ProductFactory;
+using Fleamarket.Market.ProductFactory;
 
-namespace Loppemarked.Market.Customer
+namespace Fleamarket.Market.Customer
 {
     public interface ICustomer
     {

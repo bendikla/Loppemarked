@@ -1,10 +1,10 @@
 ﻿using System;
-using Loppemarked.Market.ProductFactory;
-using Loppemarked.Market.Sale;
-using Loppemarked.Market.Controller;
-using Loppemarked;
+using Fleamarket.Market.ProductFactory;
+using Fleamarket.Market.Sale;
+using Fleamarket.Market.Controller;
+using Fleamarket;
 
-namespace Loppemarked.Market.Controller
+namespace Fleamarket.Market.Controller
 {
     public class PrintHandler
     {
