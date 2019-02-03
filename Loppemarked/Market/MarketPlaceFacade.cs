@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using Loppemarked.Market.ProductFactory;
-using Loppemarked.Market.Controller;
-using Loppemarked.Market.Customer;
-using Loppemarked.Market.Sale;
+using Fleamarket.Market.Controller;
+using Fleamarket.Market.Customer;
+using Fleamarket.Market.ProductFactory;
+using Fleamarket.Market.Sale;
 
-namespace Loppemarked.Market
+namespace Fleamarket.Market
 {
 
     public class MarketPlaceFacade
@@ -18,10 +18,9 @@ namespace Loppemarked.Market
         public static List<ISellers> Sellers { get; set; }
         public List<Thread> CustomerThreads { get; set; }
         public List<Thread> SellerThreads { get; set; }
-        private int _nrOfPeople { get; set; }
         private Names _raNames { get; set; }
         private IAttendantFactory _attendants { get; set; }
-        private PrintHandler printer = new PrintHandler();
+        private PrintHandler _printer = new PrintHandler();
 
         private MarketPlaceFacade()
         {
@@ -77,7 +76,6 @@ namespace Loppemarked.Market
             Sellers.Add(seller);
             Thread thread = new Thread(() => seller.AddProduct());
             SellerThreads.Add(thread);
-            _nrOfPeople++;
         }
 
         public void AddCustomer(string name)
@@ -86,7 +84,6 @@ namespace Loppemarked.Market
             Customers.Add(customer);
             Thread thread = new Thread(() => customer.PurchaseItem());
             CustomerThreads.Add(thread);
-            _nrOfPeople++;
         }
 
         public void Transaction(Customer.Customer customer)
@@ -108,7 +105,7 @@ namespace Loppemarked.Market
 
         public void Open()
         {
-            printer.PrintOpenMarket();
+            _printer.PrintOpenMarket();
             _marketPlaceIsOpen = true;
             
             //Sellers listen itemes for sale
@@ -159,7 +156,7 @@ namespace Loppemarked.Market
 
                 if (close)
                 {
-                    printer.CloseMarket();
+                    _printer.CloseMarket();
                     _marketPlaceIsOpen = false;
                     break;
                 }
@@ -170,18 +167,18 @@ namespace Loppemarked.Market
 
         public void Statistic()
         {
-            printer.PrintStatistics();
+            _printer.PrintStatistics();
             foreach (var seller in Sellers)
             {
                 Console.WriteLine(seller.GetName());
             }
-            printer.PrintSpacing();
+            _printer.PrintSpacing();
             Console.WriteLine("Customers:");
             foreach (var customer in Customers)
             {
                 int count = 0;
                 Console.WriteLine("\n{0}: Bought items: {1}", customer.GetName(), customer.GetProductsBought());
-                printer.PrintSpacing();
+                _printer.PrintSpacing();
                 foreach (var item in customer.GetItems())
                 {
                     Console.WriteLine("Item: {0} \nFrom: {1}\n",item.DisplayProduct(), item.GetSellerName());

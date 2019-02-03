@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Loppemarked.Market.Customer;
-using Loppemarked.Market.ProductFactory;
-using Loppemarked.Market.Sale;
+using Fleamarket.Market.Customer;
+using Fleamarket.Market.ProductFactory;
+using Fleamarket.Market.Sale;
 
-namespace Loppemarked.Market.Controller
+namespace Fleamarket.Market.Controller
 {
     class AttendantFactory : IAttendantFactory
     {

@@ -11,10 +11,10 @@ namespace Fleamarket.Market.Sale
     {
         private  string _name { get; set; }
         public string ItemName { get; set; }
-        public List<IProduct> _items { get; set; }
-        public static int _itemCount { get; set; }
+        public List<IProduct> Items { get; set; }
+        public static int ItemCount { get; set; }
         private int _itemNr { get; set; }
-        private IProduct product;
+        private IProduct _product;
         private int _nrItems { get; set; }
         private bool _isSold { get; set; }
        
@@ -22,11 +22,11 @@ namespace Fleamarket.Market.Sale
         {
             _name = name;
             _nrItems = total;
-            _itemCount = 0;
+            ItemCount = 0;
             _itemNr = 0;
-            _items = new List<IProduct>();
+            Items = new List<IProduct>();
             Console.WriteLine("{0} has come with {1} items {2} to the flea market to trade!", _name, total, product.GetName());
-            this.product = product;
+            this._product = product;
             _isSold = false;
         }
 
@@ -42,11 +42,11 @@ namespace Fleamarket.Market.Sale
             
             for (var i = 0; i < _nrItems; i++)
             {
-                    _itemCount++;
+                    ItemCount++;
                     _itemNr++;
-                    _items.Add(new ProductSkeleton(product));
-                    ItemName = _items[0].GetName();
-                    Console.WriteLine("{0} has listed a #{1} {2}\n", _name, _itemNr, _items[0].DisplayProduct());
+                    Items.Add(new ProductSkeleton(_product));
+                    ItemName = Items[0].GetName();
+                    Console.WriteLine("{0} has listed a #{1} {2}\n", _name, _itemNr, Items[0].DisplayProduct());
                     Thread.Sleep(500);
             }
             _itemNr = 0;
@@ -57,16 +57,16 @@ namespace Fleamarket.Market.Sale
 
         public void Sell(Customer.Customer customer)
         {
-            customer.AddItems(product);
+            customer.AddItems(_product);
             string transaction = customer.GetName() + " bought item #" + _itemNr+ " " + customer.GetItemName() + "\nFrom: " + _name + "\n";
             Console.WriteLine(transaction.PadLeft(Console.WindowWidth));
             customer.AddTotalItems();
-            _items.RemoveAt(0);
+            Items.RemoveAt(0);
         }        
 
         public bool ProductAvailable()
         {
-            if (_items.Count() > 0)
+            if (Items.Count() > 0)
             {
                 return true;
             }

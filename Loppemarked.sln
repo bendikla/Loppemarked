@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loppemarked", "Loppemarked\Loppemarked.csproj", "{BC7B12E5-B19C-49A6-86C4-D4BB14125D37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fleamarket", "Loppemarked\Fleamarket.csproj", "{BC7B12E5-B19C-49A6-86C4-D4BB14125D37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{A0EB3594-FEF5-458A-BC35-FE382AC4718C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{A0EB3594-FEF5-458A-BC35-FE382AC4718C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
